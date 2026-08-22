@@ -22,6 +22,8 @@ export function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
+            {/* TODO: Replace src with the new logo provided by user */}
+            {/* <img src="/path/to/logo.png" alt="Pandawa Furniture Logo" className="h-10" /> */}
             <div className="text-2xl tracking-wider font-[Alata]">PANDAWA</div>
             <div className="text-xs uppercase tracking-widest opacity-80 font-[Aboreto]">Furniture</div>
           </Link>

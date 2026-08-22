@@ -33,7 +33,7 @@ export function Home() {
               to="/contact"
               className="border-2 border-[var(--color-cream)] text-[var(--color-cream)] px-8 py-4 text-lg tracking-wide hover:bg-[var(--color-cream)] hover:text-[var(--color-wood-dark)] transition-colors"
             >
-              Custom Orders
+              Chat with us
             </Link>
           </div>
         </div>
@@ -76,30 +76,43 @@ export function Home() {
         </div>
       </section>
 
-      {/* Featured Section */}
+      {/* All Collection Section */}
       <section className="py-20 bg-[var(--color-cream-dark)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="mb-12">All Collection</h2>
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="aspect-square bg-gray-200">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1604597935770-440bc0f73c78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWN5Y2xlZCUyMHdvb2QlMjB0ZXh0dXJlJTIwbmF0dXJhbHxlbnwxfHx8fDE3NzA3MjQ1MzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Recycled teak wood texture"
-                className="w-full h-[500px] object-cover shadow-2xl"
+                src="https://images.unsplash.com/photo-1604597935770-440bc0f73c78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWN5Y2xlZCUyMHdvb2QlMjB0ZXh0dXJlJTIwbmF0dXJhbHxlbnwxfHx8fDE3NzA3MjQ1MzF8MA&ixlib=rb-4.1.0&q=80&w=500&utm_source=figma&utm_medium=referral"
+                alt="Collection item 1"
+                className="w-full h-full object-cover shadow-md"
               />
             </div>
-            <div>
-              <h2 className="mb-6">The Soul of Nature in Every Grain</h2>
-              <p className="text-lg mb-4 opacity-80">
-                Each piece of recycled teak carries its own history—weathered by time, shaped by nature, and transformed by skilled hands into furniture that bridges past and present.
-              </p>
-              <p className="text-lg mb-6 opacity-80">Every scratch, texture, and grain pattern tells a quality. This is not just furniture; it's a conversation between heritage and modern living.</p>
-              <Link
-                to="/about"
-                className="inline-block bg-[var(--color-green-deep)] text-[var(--color-cream)] px-6 py-3 tracking-wide hover:bg-[var(--color-green-medium)] transition-colors"
-              >
-                Discover Our Story
-              </Link>
+            {/* TODO: Add more gallery items here */}
+            <div className="aspect-square bg-gray-200 flex items-center justify-center text-gray-500 shadow-md">
+              <span className="opacity-70">Gallery Image 2</span>
             </div>
+            <div className="aspect-square bg-gray-200 flex items-center justify-center text-gray-500 shadow-md">
+              <span className="opacity-70">Gallery Image 3</span>
+            </div>
+            <div className="aspect-square bg-gray-200 flex items-center justify-center text-gray-500 shadow-md">
+              <span className="opacity-70">Gallery Image 4</span>
+            </div>
+            <div className="aspect-square bg-gray-200 flex items-center justify-center text-gray-500 shadow-md">
+              <span className="opacity-70">Gallery Image 5</span>
+            </div>
+            <div className="aspect-square bg-gray-200 flex items-center justify-center text-gray-500 shadow-md">
+              <span className="opacity-70">Gallery Image 6</span>
+            </div>
+          </div>
+          <div className="mt-12">
+            <Link
+              to="/products"
+              className="inline-block bg-[var(--color-green-deep)] text-[var(--color-cream)] px-8 py-4 tracking-wide hover:bg-[var(--color-green-medium)] transition-colors"
+            >
+              View Full Catalog
+            </Link>
           </div>
         </div>
       </section>

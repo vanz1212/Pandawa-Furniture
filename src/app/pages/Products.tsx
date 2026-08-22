@@ -1,6 +1,7 @@
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router';
 import { AlertCircle } from 'lucide-react';
+import { useState } from 'react';
 import diningTableImg from 'figma:asset/747c9eacd41d3030f053560c4665dad6782f4c12.png';
 import dressoirImg from 'figma:asset/15f0a36d33a7c06acb99f1b5cf23860e31c9e229.png';
 import waterSinkImg from 'figma:asset/e5cd0fd4255a0e604c6ba1ec1d5873e3d9ebcf66.png';
@@ -15,38 +16,51 @@ import proofRawSinksImg from 'figma:asset/fbd705d2638d0d483e883fa699ac22047d0b7b
 import proofModernSinkImg from 'figma:asset/b3f18b3721af140365d532d02c4d8bea34c7615a.png';
 
 export function Products() {
-  const categories = [
+  const [activeTab, setActiveTab] = useState('All');
+  const tabs = ['All', 'Tables', 'Chairs', 'Cabinets', 'Accessories'];
+
+  const products = [
     {
-      name: 'Dining Tables',
+      name: 'Rustic Dining Table',
+      category: 'Tables',
       description: 'Gather around the warmth of reclaimed teak',
       image: diningTableImg,
     },
     {
-      name: 'Cabinet & storage',
+      name: 'Lounge Teak Chair',
+      category: 'Chairs',
       description: 'Comfort meets artisan craftsmanship',
       image: chairSeatingImg,
     },
     {
       name: 'Water Sink Stone',
+      category: 'Accessories',
       description: 'Hand-carved elegance for your sanctuary',
       image: waterSinkImg,
     },
     {
-      name: 'Coffee Tables',
+      name: 'Coffee Table Minimalist',
+      category: 'Tables',
       description: 'Centerpieces that spark conversation',
       image: coffeeTableImg,
     },
     {
-      name: 'Dressoir',
+      name: 'Vintage Dressoir',
+      category: 'Cabinets',
       description: 'Elegant solutions for organized living',
       image: dressoirImg,
     },
     {
-      name: 'Tv Tables',
+      name: 'Bedroom Wardrobe',
+      category: 'Cabinets',
       description: 'Rest in sustainable elegance',
       image: bedroomFurnitureImg,
     },
   ];
+
+  const filteredProducts = activeTab === 'All' 
+    ? products 
+    : products.filter(p => p.category === activeTab);
 
   const proofImages = [
     {
@@ -111,30 +125,54 @@ export function Products() {
         </div>
       </section>
 
-      {/* Product Categories Grid */}
+      {/* Products Display with Categories */}
       <section className="py-20 bg-[var(--color-cream)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Tabs Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12 border-b border-gray-300 pb-4">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-6 py-2 text-lg font-medium transition-colors ${
+                  activeTab === tab
+                    ? 'text-[var(--color-green-deep)] border-b-2 border-[var(--color-green-deep)]'
+                    : 'text-gray-500 hover:text-[var(--color-wood-dark)]'
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Product Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category, index) => (
+            {filteredProducts.map((product, index) => (
               <div
                 key={index}
                 className="group cursor-pointer bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
               >
                 <div className="relative h-80 overflow-hidden">
                   <ImageWithFallback
-                    src={category.image}
-                    alt={category.name}
+                    src={product.image}
+                    alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-1">{category.name}</h3>
-                  <p className="text-sm text-gray-500 mb-3">and more</p>
-                  
+                  <h3 className="mb-1">{product.name}</h3>
+                  <p className="text-sm text-gray-500 mb-3">{product.description}</p>
                 </div>
               </div>
             ))}
           </div>
+
+          {filteredProducts.length === 0 && (
+            <div className="text-center py-12 text-gray-500">
+              No products found in this category.
+            </div>
+          )}
         </div>
       </section>
 

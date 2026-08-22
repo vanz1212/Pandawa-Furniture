@@ -37,16 +37,16 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact & Location */}
           <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4">Connect</h4>
-            <div className="space-y-3">
+            <h4 className="text-sm uppercase tracking-wider mb-4">Connect & Visit</h4>
+            <div className="space-y-3 mb-6">
               <a 
                 href="https://wa.me/" 
                 className="flex items-center space-x-2 text-sm opacity-80 hover:opacity-100 transition-opacity"
               >
                 <MessageCircle size={18} />
-                <span>WhatsApp</span>
+                <span>WhatsApp: [NOMOR TELEPON]</span>
               </a>
               <a 
                 href="mailto:info@pandawafurniture.com" 
@@ -61,6 +61,11 @@ export function Footer() {
                 </a>
               </div>
             </div>
+            
+            <h4 className="text-sm uppercase tracking-wider mb-2">Location</h4>
+            <p className="text-sm opacity-80 leading-relaxed">
+              [ALAMAT LENGKAP TOKO/WORKSHOP]
+            </p>
           </div>
         </div>
 
