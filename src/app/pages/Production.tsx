@@ -1,12 +1,13 @@
-import image_e77818745e813bf5ce0d49cc96412216566da6c8 from 'figma:asset/e77818745e813bf5ce0d49cc96412216566da6c8.png'
-import image_1aad063b976faef1f4b68af17eca100c145ee9a7 from 'figma:asset/1aad063b976faef1f4b68af17eca100c145ee9a7.png'
-import image_ea4e0d3666996065ddeb190c4028a8c43ca1eab2 from 'figma:asset/ea4e0d3666996065ddeb190c4028a8c43ca1eab2.png'
-import image_f5553a4a208f9b99979e04e8268a24f5a5feabcd from 'figma:asset/f5553a4a208f9b99979e04e8268a24f5a5feabcd.png'
-import image_61f250a254b4a06e52d903637392bbace611f978 from 'figma:asset/61f250a254b4a06e52d903637392bbace611f978.png'
-import image_621d39621b0ef347797640e713ebeb2bd5c51081 from 'figma:asset/621d39621b0ef347797640e713ebeb2bd5c51081.png'
-import image_810c3ec98355f08a9c766659a6ea0cd9314b15ac from 'figma:asset/810c3ec98355f08a9c766659a6ea0cd9314b15ac.png'
-import image_ba07c6ac9f6733b987465b474d9baa59a1afefd6 from 'figma:asset/ba07c6ac9f6733b987465b474d9baa59a1afefd6.png'
-import image_08deb210930238d0b61573463464031a301d6be3 from 'figma:asset/08deb210930238d0b61573463464031a301d6be3.png'
+import productionHeroImg from '../assets/production-hero.jpeg';
+import image_e77818745e813bf5ce0d49cc96412216566da6c8 from '../assets/e77818745e813bf5ce0d49cc96412216566da6c8.png';
+import image_1aad063b976faef1f4b68af17eca100c145ee9a7 from '../assets/1aad063b976faef1f4b68af17eca100c145ee9a7.png';
+import image_ea4e0d3666996065ddeb190c4028a8c43ca1eab2 from '../assets/ea4e0d3666996065ddeb190c4028a8c43ca1eab2.png';
+import image_f5553a4a208f9b99979e04e8268a24f5a5feabcd from '../assets/f5553a4a208f9b99979e04e8268a24f5a5feabcd.png';
+import image_61f250a254b4a06e52d903637392bbace611f978 from '../assets/61f250a254b4a06e52d903637392bbace611f978.png';
+import image_621d39621b0ef347797640e713ebeb2bd5c51081 from '../assets/621d39621b0ef347797640e713ebeb2bd5c51081.png';
+import image_810c3ec98355f08a9c766659a6ea0cd9314b15ac from '../assets/810c3ec98355f08a9c766659a6ea0cd9314b15ac.png';
+import image_ba07c6ac9f6733b987465b474d9baa59a1afefd6 from '../assets/ba07c6ac9f6733b987465b474d9baa59a1afefd6.png';
+import image_08deb210930238d0b61573463464031a301d6be3 from '../assets/08deb210930238d0b61573463464031a301d6be3.png';
 import { Leaf, Hammer, Shield, Truck } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
@@ -59,10 +60,18 @@ export function Production() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-[var(--color-green-deep)] text-[var(--color-cream)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-6 text-[var(--color-cream)] font-[Alata] text-[#ffffff]">Production & Shipping</h1>
-          <p className="text-xl opacity-90">From reclaimed wood to your home a transparent journey of craftsmanship, sustainability, and care.</p>
+      <section className="relative py-32 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <ImageWithFallback
+            src={productionHeroImg}
+            alt="Production & Shipping"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
+          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">Production & Shipping</h1>
+          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">From reclaimed wood to your home a transparent journey of craftsmanship, sustainability, and care.</p>
         </div>
       </section>
 

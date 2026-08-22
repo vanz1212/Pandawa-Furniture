@@ -1,5 +1,6 @@
-import image_d455cb17ae1190210b91ca432cd6a6d574f3963a from 'figma:asset/d455cb17ae1190210b91ca432cd6a6d574f3963a.png'
-import image_1b6ab2dd5700691fc625338f6c671348c61cf7b8 from 'figma:asset/1b6ab2dd5700691fc625338f6c671348c61cf7b8.png'
+import aboutHeroImg from '../assets/about-hero.jpeg';
+import image_d455cb17ae1190210b91ca432cd6a6d574f3963a from '../assets/d455cb17ae1190210b91ca432cd6a6d574f3963a.png';
+import image_1b6ab2dd5700691fc625338f6c671348c61cf7b8 from '../assets/1b6ab2dd5700691fc625338f6c671348c61cf7b8.png';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Heart, TreePine, Sparkles, Users } from 'lucide-react';
 
@@ -7,10 +8,18 @@ export function About() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-[var(--color-green-deep)] text-[var(--color-cream)] bg-[#4a3e2d]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-6 text-[var(--color-cream)] text-[#ffffff] font-[Alata]">About Pandawa Furniture</h1>
-          <p className="text-xl opacity-90">A family legacy rooted in Indonesian craftsmanship, sustainability, and the timeless beauty of teak furniture</p>
+      <section className="relative py-32 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <ImageWithFallback
+            src={aboutHeroImg}
+            alt="About Pandawa Furniture"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
+          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">About Pandawa Furniture</h1>
+          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">A family legacy rooted in Indonesian craftsmanship, sustainability, and the timeless beauty of teak furniture</p>
         </div>
       </section>
 

@@ -1,3 +1,5 @@
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import contactHeroImg from '../assets/contact-hero.jpeg';
 import {
   MessageCircle,
   Mail,
@@ -9,12 +11,20 @@ export function Contact() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-[var(--color-green-deep)] text-[var(--color-cream)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-6 text-[var(--color-cream)] font-[Alata] text-[#ffffff]">
+      <section className="relative py-32 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <ImageWithFallback
+            src={contactHeroImg}
+            alt="Contact Pandawa Furniture"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
+          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">
             Get in Touch
           </h1>
-          <p className="text-xl opacity-90">
+          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">
             Let's discuss your custom furniture project. We're
             here to bring your vision to life.
           </p>

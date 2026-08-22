@@ -1,4 +1,4 @@
-import heroBg from 'figma:asset/2874e70677e9347f1c498bc483444526782683b2.png'
+import heroBg from '../assets/2874e70677e9347f1c498bc483444526782683b2.png';
 import { Link } from 'react-router';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Leaf, Users, Sparkles } from 'lucide-react';
@@ -17,9 +17,9 @@ export function Home() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
-        <div className="relative z-10 text-center text-[var(--color-cream)] px-4 max-w-4xl mx-auto">
-          <h1 className="mb-6 text-[var(--color-cream)] font-[Alata] text-[#ffffff]">Timeless Craft, Naturally Involved</h1>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto text-center">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-[#fffcf2] drop-shadow-lg">
+          <h1 className="mb-6 font-[Alata] text-[#fffcf2] drop-shadow-xl">Timeless Craft, Naturally Involved</h1>
+          <p className="text-xl mb-8 text-[#fffcf2]/95 max-w-2xl mx-auto text-center font-medium drop-shadow-md">
             Where heritage craftsmanship meets sustainable luxury. Each piece tells a story of nature, tradition, and modern living.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,19 +1,20 @@
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import productsHeroImg from '../assets/products-hero.jpeg';
 import { Link } from 'react-router';
 import { AlertCircle } from 'lucide-react';
 import { useState } from 'react';
-import diningTableImg from 'figma:asset/747c9eacd41d3030f053560c4665dad6782f4c12.png';
-import dressoirImg from 'figma:asset/15f0a36d33a7c06acb99f1b5cf23860e31c9e229.png';
-import waterSinkImg from 'figma:asset/e5cd0fd4255a0e604c6ba1ec1d5873e3d9ebcf66.png';
-import chairSeatingImg from 'figma:asset/370b981283bbd2c5a2a73ec4db7335096541114f.png';
-import coffeeTableImg from 'figma:asset/ff89027649427a59d1b62a1e882d28aed26cc775.png';
-import bedroomFurnitureImg from 'figma:asset/f3c9df50243d7f9e3d03f042f3f6626ec85bbf74.png';
-import proofCabinetImg from 'figma:asset/fc5964b3113fde8a49149cd92f85ea4450691c43.png';
-import proofTvStandImg from 'figma:asset/bb679ca50af152a8f0faa607e561f4d8254d5707.png';
-import proofStoneSinkImg from 'figma:asset/9d2c15d930a9c6e851693b503a7ba6f8be3a7dab.png';
-import proofWardrobeImg from 'figma:asset/93fec46fe2c182559cb71aafc651703bd56b2630.png';
-import proofRawSinksImg from 'figma:asset/fbd705d2638d0d483e883fa699ac22047d0b7b86.png';
-import proofModernSinkImg from 'figma:asset/b3f18b3721af140365d532d02c4d8bea34c7615a.png';
+import diningTableImg from '../assets/747c9eacd41d3030f053560c4665dad6782f4c12.png';
+import dressoirImg from '../assets/15f0a36d33a7c06acb99f1b5cf23860e31c9e229.png';
+import waterSinkImg from '../assets/e5cd0fd4255a0e604c6ba1ec1d5873e3d9ebcf66.png';
+import chairSeatingImg from '../assets/370b981283bbd2c5a2a73ec4db7335096541114f.png';
+import coffeeTableImg from '../assets/ff89027649427a59d1b62a1e882d28aed26cc775.png';
+import bedroomFurnitureImg from '../assets/f3c9df50243d7f9e3d03f042f3f6626ec85bbf74.png';
+import proofCabinetImg from '../assets/fc5964b3113fde8a49149cd92f85ea4450691c43.png';
+import proofTvStandImg from '../assets/bb679ca50af152a8f0faa607e561f4d8254d5707.png';
+import proofStoneSinkImg from '../assets/9d2c15d930a9c6e851693b503a7ba6f8be3a7dab.png';
+import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
+import proofRawSinksImg from '../assets/fbd705d2638d0d483e883fa699ac22047d0b7b86.png';
+import proofModernSinkImg from '../assets/b3f18b3721af140365d532d02c4d8bea34c7615a.png';
 
 export function Products() {
   const [activeTab, setActiveTab] = useState('All');
@@ -92,10 +93,18 @@ export function Products() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-[var(--color-green-deep)] text-[var(--color-cream)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-6 text-[var(--color-cream)] font-[Alata] text-[#ffffff]">Our Collection</h1>
-          <p className="text-xl opacity-90">
+      <section className="relative py-32 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <ImageWithFallback
+            src={productsHeroImg}
+            alt="Our Collection"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
+          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">Our Collection</h1>
+          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">
             Discover furniture that blends Indonesian heritage with contemporary design.
           </p>
         </div>
