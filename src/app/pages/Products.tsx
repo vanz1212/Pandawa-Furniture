@@ -254,7 +254,7 @@ export function Products() {
             to="/contact"
             className="inline-block bg-[var(--color-wood-light)] text-[var(--color-wood-dark)] px-8 py-4 text-lg tracking-wide hover:bg-[var(--color-cream)] transition-colors"
           >
-            Discuss Your Custom Design
+            Chat with us
           </Link>
         </div>
       </section>
