@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router';
-import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -16,85 +15,69 @@ export function Navigation() {
     { path: '/contact', label: t('nav.contact') },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
-
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'id' : 'en';
     i18n.changeLanguage(newLang);
   };
 
   return (
-    <nav className="bg-[var(--color-green-deep)] text-[var(--color-cream)] sticky top-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl tracking-wider font-[Alata]">PANDAWA</div>
-            <div className="text-xs uppercase tracking-widest opacity-80 font-[Aboreto]">Furniture</div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm tracking-wide transition-colors ${
-                  isActive(link.path)
-                    ? 'text-[var(--color-wood-light)]'
-                    : 'text-[var(--color-cream)] hover:text-[var(--color-wood-light)]'
-                }`}
-              >
+    <nav className="fixed top-0 w-full z-50 bg-brand-cream/95 backdrop-blur-sm shadow-sm">
+      <div className="w-full px-6 md:px-12 flex items-center h-20">
+        <Link className="font-headline-md text-headline-md font-bold text-brand-terracotta whitespace-nowrap" to="/">
+          Pandawa Furniture
+        </Link>
+        <ul className="hidden md:flex gap-8 items-center font-body-md text-body-md uppercase tracking-wider ml-auto">
+          {links.map(link => (
+            <li key={link.path}>
+              <Link className={`font-semibold transition-colors duration-300 ease-in-out ${location.pathname === link.path ? 'text-brand-terracotta' : 'text-brand-dark-earth hover:text-brand-terracotta'}`} to={link.path}>
                 {link.label}
               </Link>
-            ))}
-            
+            </li>
+          ))}
+          <li>
             <button 
               onClick={toggleLanguage}
-              className="flex items-center space-x-1 text-sm tracking-wide hover:text-[var(--color-wood-light)] transition-colors border border-[var(--color-cream)]/30 rounded px-2 py-1"
+              className="flex items-center space-x-1 text-sm tracking-wide text-brand-dark-earth hover:text-brand-terracotta transition-colors rounded px-2 py-1"
             >
-              <Globe size={16} />
+              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>language</span>
               <span className="uppercase">{i18n.language}</span>
             </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <button 
-              onClick={toggleLanguage}
-              className="flex items-center space-x-1 text-sm tracking-wide hover:text-[var(--color-wood-light)] transition-colors border border-[var(--color-cream)]/30 rounded px-2 py-1"
-            >
-              <span className="uppercase">{i18n.language}</span>
-            </button>
-            <button
-              className="p-2"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          </li>
+        </ul>
+        <div className="md:hidden ml-auto flex items-center gap-6">
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center space-x-1 text-sm tracking-wide text-brand-dark-earth hover:text-brand-terracotta transition-colors rounded px-2 py-1"
+          >
+            <span className="uppercase">{i18n.language}</span>
+          </button>
+          <button 
+            className="text-brand-dark-earth flex items-center justify-center p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <span className="material-symbols-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
+          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden pb-4">
-            {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`block py-2 text-sm tracking-wide ${
-                  isActive(link.path)
-                    ? 'text-[var(--color-wood-light)]'
-                    : 'text-[var(--color-cream)]'
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
+      
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-brand-cream border-t border-brand-cocoa-brown/10 shadow-lg absolute w-full left-0">
+          <ul className="flex flex-col py-4 px-6 gap-4 font-body-md text-body-md uppercase tracking-wider bg-brand-cream">
+            {links.map(link => (
+              <li key={link.path}>
+                <Link 
+                  className={`font-semibold block w-full py-2 ${location.pathname === link.path ? 'text-brand-terracotta' : 'text-brand-dark-earth hover:text-brand-terracotta'}`}
+                  to={link.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }

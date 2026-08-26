@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Artisan Earth &amp; Timber</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#8f4d1a",
+                    "secondary-fixed-dim": "#b7cea5",
+                    "surface-dim": "#e8d7c9",
+                    "inverse-on-surface": "#ffeedf",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#566a48",
+                    "on-tertiary-fixed": "#2a170b",
+                    "on-background": "#221a11",
+                    "error": "#ba1a1a",
+                    "surface-container": "#fcebdc",
+                    "surface": "#fff8f4",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#d2eabf",
+                    "surface-container-low": "#fff1e6",
+                    "primary-container": "#aa632e",
+                    "inverse-primary": "#ffb787",
+                    "secondary": "#506443",
+                    "inverse-surface": "#382f25",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#8c6e5f",
+                    "primary-fixed-dim": "#ffb787",
+                    "surface-bright": "#fff8f4",
+                    "surface-container-high": "#f6e5d7",
+                    "outline": "#867369",
+                    "secondary-container": "#d2eabf",
+                    "tertiary": "#715647",
+                    "on-secondary-fixed-variant": "#394c2d",
+                    "tertiary-fixed": "#ffdbc9",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#311300",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#53443a",
+                    "on-surface": "#221a11",
+                    "surface-variant": "#f0e0d1",
+                    "tertiary-fixed-dim": "#e3bfad",
+                    "primary-fixed": "#ffdcc7",
+                    "on-primary-container": "#fffbff",
+                    "primary": "#8c4b18",
+                    "surface-container-highest": "#f0e0d1",
+                    "on-tertiary-fixed-variant": "#5a4133",
+                    "on-tertiary-container": "#fffbff",
+                    "outline-variant": "#d9c2b5",
+                    "on-primary-fixed-variant": "#723702",
+                    "background": "#fff8f4",
+                    "on-secondary-fixed": "#0e2006",
+                    
+                    // Specific Brand Colors requested
+                    "terracotta": "#be733d",
+                    "deep-olive": "#4a5e3d",
+                    "dark-earth": "#2d241b",
+                    "whatsapp": "#25D366"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "grid-gutter": "24px",
+                    "grid-margin": "40px",
+                    "section-gap-mobile": "64px",
+                    "section-gap-desktop": "128px"
+            },
+            "fontFamily": {
+                    "body-lg": ["\"Source Sans 3\""],
+                    "headline-lg": ["Syne"],
+                    "headline-md": ["Syne"],
+                    "display-lg": ["Syne"],
+                    "body-md": ["\"Source Sans 3\""],
+                    "headline-lg-mobile": ["Syne"],
+                    "label-md": ["\"Source Sans 3\""]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .shadow-ambient {
+            box-shadow: 0 10px 30px -10px rgba(45, 36, 27, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-background/95 backdrop-blur-sm fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
+<div class="max-w-7xl mx-auto px-grid-margin flex justify-between items-center h-20">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim tracking-tight" href="#">Artisan Earth &amp; Timber</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md uppercase tracking-wider" href="#">Collections</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md uppercase tracking-wider" href="#">Our Story</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md uppercase tracking-wider" href="#">Craftsmanship</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md uppercase tracking-wider" href="#">Custom Orders</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md uppercase tracking-wider" href="#">Journal</a>
+</div>
+<div class="flex items-center space-x-6 text-primary">
+<button aria-label="shopping_bag" class="hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button aria-label="person" class="hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full" data-alt="A serene, sunlit minimalist woodworking studio filled with beautifully crafted reclaimed wood furniture. Dust motes dance in shafts of warm sunlight streaming through large industrial windows. The aesthetic is high-end editorial, organic, with warm cream walls and rich dark earth wood tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbspCncfbtWjrcnwzlN5XPVMn-Qdn0vVmclQujnwRZzmTs_5y3LOG5xlme7XWNfGJPi10zcWB-wFiD7dfProauucCdRNeYVxDU4WD6ukWS1eQluuYEGHOORnzFST9-33CUypJ_--U-5xHoEZv4jX6tk3g14seZqYkZGvaWZB2hh8LXDoPu5NaBYIaSQ79xRNKPJY8qiHt-VObzJ-jDb3Mn3rzVI1Mv8t5Ek1RtUaYoztYQa8uWMwZNpQ')"></div>
+<div class="absolute inset-0 bg-dark-earth/40 mix-blend-multiply"></div>
+<div class="relative z-10 text-center px-grid-margin max-w-4xl mx-auto">
+<h1 class="font-display-lg text-display-lg text-on-tertiary mb-6 drop-shadow-md">Get in Touch</h1>
+<p class="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto drop-shadow">Let's discuss your custom furniture project. We're here to bring your vision to life.</p>
+</div>
+</section>
+<!-- Primary Contact Methods -->
+<section class="max-w-7xl mx-auto px-grid-margin py-section-gap-desktop relative z-20 -mt-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
+<!-- WhatsApp Card -->
+<div class="bg-surface-container-lowest rounded-xl p-10 shadow-ambient flex flex-col items-start border border-surface-variant transition-transform hover:-translate-y-1 duration-300">
+<div class="w-16 h-16 rounded-full bg-whatsapp/10 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-[32px] text-whatsapp" data-icon="chat">chat</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-dark-earth mb-4">WhatsApp for Fast Response</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 flex-grow">The quickest way to reach us for custom design discussions, questions, or urgent inquiries.</p>
+<a class="inline-flex items-center justify-center bg-whatsapp text-white font-label-md text-label-md px-8 py-4 rounded hover:bg-whatsapp/90 transition-colors w-full sm:w-auto" href="#">
+                        Chat on WhatsApp
+                    </a>
+</div>
+<!-- Email Card -->
+<div class="bg-surface-container-lowest rounded-xl p-10 shadow-ambient flex flex-col items-start border border-surface-variant transition-transform hover:-translate-y-1 duration-300">
+<div class="w-16 h-16 rounded-full bg-deep-olive/10 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-[32px] text-deep-olive" data-icon="mail">mail</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-dark-earth mb-4">Email for Official Inquiries</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 flex-grow">For detailed project proposals, quotes, and formal correspondence.</p>
+<a class="inline-flex items-center justify-center bg-deep-olive text-white font-label-md text-label-md px-8 py-4 rounded hover:bg-deep-olive/90 transition-colors w-full sm:w-auto" href="mailto:yusavitocompanies@gmail.com">
+                        Send Email
+                    </a>
+</div>
+</div>
+</section>
+<!-- Additional Info -->
+<section class="bg-surface-container py-section-gap-desktop">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter text-center">
+<!-- Location -->
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest shadow-ambient flex items-center justify-center mb-6 text-terracotta">
+<span class="material-symbols-outlined text-[32px]" data-icon="location_on">location_on</span>
+</div>
+<h3 class="font-headline-md text-[20px] text-dark-earth mb-2 font-semibold">Location</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Kudus, Central Java<br/>Indonesia</p>
+</div>
+<!-- Phone -->
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest shadow-ambient flex items-center justify-center mb-6 text-terracotta">
+<span class="material-symbols-outlined text-[32px]" data-icon="call">call</span>
+</div>
+<h3 class="font-headline-md text-[20px] text-dark-earth mb-2 font-semibold">Phone</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">+62 851-6862-8421</p>
+</div>
+<!-- Email -->
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest shadow-ambient flex items-center justify-center mb-6 text-terracotta">
+<span class="material-symbols-outlined text-[32px]" data-icon="alternate_email">alternate_email</span>
+</div>
+<h3 class="font-headline-md text-[20px] text-dark-earth mb-2 font-semibold">Email</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">yusavitocompanies@gmail.com</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep Olive Banner -->
+<section class="bg-deep-olive py-24 px-grid-margin text-center">
+<h2 class="font-display-lg text-[48px] text-surface-bright mb-6 max-w-3xl mx-auto leading-tight">Ready to craft your legacy?</h2>
+<p class="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto mb-10">Every piece tells a story. Let us help you tell yours with sustainable, handcrafted precision.</p>
+<a class="inline-block bg-terracotta text-white font-label-md text-label-md px-10 py-5 rounded hover:bg-terracotta/90 transition-colors" href="#">Start a Project</a>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-high dark:bg-surface-container-lowest w-full pt-section-gap-desktop pb-12">
+<div class="max-w-7xl mx-auto px-grid-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<div class="col-span-1 lg:col-span-2">
+<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim block mb-6 font-bold tracking-tight" href="#">Artisan Earth &amp; Timber</a>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-md">Crafting sustainable, heirloom-quality furniture from reclaimed Indonesian wood. Minimalist design meeting earthy luxury.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-md text-[18px] text-primary dark:text-primary-fixed-dim font-bold mb-6">Links</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Shipping &amp; Returns</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out font-bold text-primary dark:text-primary-fixed-dim" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-md text-[18px] text-primary dark:text-primary-fixed-dim font-bold mb-6">Connect</h4>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-grid-margin mt-16 pt-8 border-t border-surface-variant/50">
+<p class="font-body-md text-[14px] text-on-surface-variant dark:text-on-surface-variant">© 2024 Artisan Earth &amp; Timber. Sustainable Indonesian Craftsmanship.</p>
+</div>
+</footer>
+</body></html>

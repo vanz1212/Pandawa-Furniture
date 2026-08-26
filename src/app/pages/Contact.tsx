@@ -1,136 +1,94 @@
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import contactHeroImg from '../assets/contact-hero.jpeg';
-import {
-  MessageCircle,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import contactHeroImg from '../assets/contact-hero.jpeg';
 
 export function Contact() {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src={contactHeroImg}
-            alt="Contact Pandawa Furniture"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
-          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">
-            {t('contact.hero.title')}
-          </h1>
-          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">
+      <section className="relative w-full h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full" 
+          style={{ backgroundImage: `url(${contactHeroImg})` }}
+        />
+        <div className="absolute inset-0 bg-brand-dark-earth/40 mix-blend-multiply"></div>
+        <div className="relative z-10 text-center px-grid-margin max-w-4xl mx-auto">
+          <h1 className="font-display-lg text-display-lg text-white mb-6 drop-shadow-md">{t('contact.hero.title')}</h1>
+          <p className="font-body-lg text-body-lg text-brand-cream max-w-2xl mx-auto drop-shadow">
             {t('contact.hero.desc')}
           </p>
         </div>
       </section>
 
-      {/* Contact Methods - Prominent */}
-      <section className="py-16 bg-[var(--color-wood-light)] text-[var(--color-wood-dark)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* WhatsApp - Primary */}
-            <div className="bg-white p-8 shadow-lg text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500 mb-4">
-                <MessageCircle
-                  className="text-white"
-                  size={32}
-                />
-              </div>
-              <h3 className="mb-3">
-                {t('contact.methods.wa.title')}
-              </h3>
-              <p className="mb-4 opacity-70">
-                {t('contact.methods.wa.desc')}
-              </p>
-              <a
-                href="https://wa.me/6285168628421"
-                className="inline-block bg-green-500 text-white px-6 py-3 tracking-wide hover:bg-green-600 transition-colors"
-              >
-                {t('contact.methods.wa.button')}
-              </a>
+      {/* Primary Contact Methods */}
+      <section className="max-w-7xl mx-auto px-grid-margin py-section-gap-desktop relative z-20 -mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
+          {/* WhatsApp Card */}
+          <div className="bg-white rounded-xl p-10 shadow-level1 flex flex-col items-start border border-brand-cocoa-brown/10 transition-transform hover:-translate-y-1 duration-300">
+            <div className="w-16 h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center mb-8">
+              <span className="material-symbols-outlined text-[32px] text-[#25D366]" style={{fontVariationSettings: "'wght' 300"}}>chat</span>
             </div>
+            <h2 className="font-headline-md text-headline-md text-brand-dark-earth mb-4">{t('contact.methods.wa.title')}</h2>
+            <p className="font-body-md text-body-md text-brand-dark-earth/70 mb-10 flex-grow">
+              {t('contact.methods.wa.desc')}
+            </p>
+            <a href="https://wa.me/6285168628421" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-[#25D366] text-white font-label-md text-label-md h-14 px-10 rounded-full hover:bg-[#20bd5a] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 w-full sm:w-auto shadow-md">
+              {t('contact.methods.wa.button')}
+            </a>
+          </div>
 
-            {/* Email - Secondary */}
-            <div className="bg-white p-8 shadow-lg text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[var(--color-green-deep)] mb-4">
-                <Mail
-                  className="text-[var(--color-cream)]"
-                  size={32}
-                />
-              </div>
-              <h3 className="mb-3">
-                {t('contact.methods.email.title')}
-              </h3>
-              <p className="mb-4 opacity-70">
-                {t('contact.methods.email.desc')}
-              </p>
-              <a
-                href="mailto:alexpandawa@gmail.com"
-                className="inline-block bg-[var(--color-green-deep)] text-[var(--color-cream)] px-6 py-3 tracking-wide hover:bg-[var(--color-green-medium)] transition-colors"
-              >
-                {t('contact.methods.email.button')}
-              </a>
+          {/* Email Card */}
+          <div className="bg-white rounded-xl p-10 shadow-level1 flex flex-col items-start border border-brand-cocoa-brown/10 transition-transform hover:-translate-y-1 duration-300">
+            <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 flex items-center justify-center mb-8">
+              <span className="material-symbols-outlined text-[32px] text-brand-deep-olive" style={{fontVariationSettings: "'wght' 300"}}>mail</span>
             </div>
+            <h2 className="font-headline-md text-headline-md text-brand-dark-earth mb-4">{t('contact.methods.email.title')}</h2>
+            <p className="font-body-md text-body-md text-brand-dark-earth/70 mb-10 flex-grow">
+              {t('contact.methods.email.desc')}
+            </p>
+            <a href="mailto:alexpandawa@gmail.com" className="inline-flex items-center justify-center bg-brand-deep-olive text-white font-label-md text-label-md h-14 px-10 rounded-full hover:bg-opacity-90 hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 w-full sm:w-auto shadow-md">
+              {t('contact.methods.email.button')}
+            </a>
           </div>
         </div>
       </section>
 
       {/* Additional Info */}
-      <section className="py-20 bg-[var(--color-cream)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-wood-light)]/30 mb-4">
-                <MapPin
-                  className="text-[var(--color-wood-dark)]"
-                  size={24}
-                />
+      <section className="bg-brand-cream/30 py-section-gap-desktop">
+        <div className="max-w-7xl mx-auto px-grid-margin">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter text-center max-w-4xl mx-auto">
+            {/* Location */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 rounded-full bg-white shadow-level1 flex items-center justify-center mb-6 text-brand-terracotta group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'wght' 300"}}>location_on</span>
               </div>
-              <h3 className="mb-2">{t('contact.info.location')}</h3>
-              <p className="opacity-70 text-sm">
+              <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-2 font-semibold">{t('contact.info.location')}</h3>
+              <p className="font-body-md text-body-md text-brand-dark-earth/70">
                 Jln. Lingkar Selatan Kudus-Jepara km 3,<br />
                 Desa Pasuruhan kidul, Kota Kudus
               </p>
             </div>
-
-            <div>
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-wood-light)]/30 mb-4">
-                <Phone
-                  className="text-[var(--color-wood-dark)]"
-                  size={24}
-                />
+            {/* Email */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 rounded-full bg-white shadow-level1 flex items-center justify-center mb-6 text-brand-terracotta group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'wght' 300"}}>alternate_email</span>
               </div>
-              <h3 className="mb-2">{t('contact.info.phone')}</h3>
-              <p className="opacity-70 text-sm">
-                +62 851-6862-8421
-                <br />
-              </p>
-            </div>
-
-            <div>
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-wood-light)]/30 mb-4">
-                <Mail
-                  className="text-[var(--color-wood-dark)]"
-                  size={24}
-                />
-              </div>
-              <h3 className="mb-2">{t('contact.info.email')}</h3>
-              <p className="opacity-70 text-sm">
-                alexpandawa@gmail.com
-                <br />
-              </p>
+              <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-2 font-semibold">{t('contact.info.email')}</h3>
+              <p className="font-body-md text-body-md text-brand-dark-earth/70">alexpandawa@gmail.com</p>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Deep Olive Banner */}
+      <section className="bg-brand-deep-olive py-24 px-grid-margin text-center">
+        <h2 className="font-display-lg text-[48px] text-brand-cream mb-6 max-w-3xl mx-auto leading-tight">Ready to craft your legacy?</h2>
+        <p className="font-body-lg text-body-lg text-brand-cream/80 max-w-2xl mx-auto mb-10">Every piece tells a story. Let us help you tell yours with sustainable, handcrafted precision.</p>
+        <Link to="/products" className="inline-flex items-center justify-center bg-brand-terracotta text-white font-label-md text-label-md px-10 h-14 rounded-full hover:bg-[#d6854b] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 shadow-lg">
+          Start a Project
+        </Link>
       </section>
     </div>
   );

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Production &amp; Shipping - Artisan Earth &amp; Timber</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;family=Source+Sans+3:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#fff1e6",
+                      "outline-variant": "#d9c2b5",
+                      "surface-variant": "#f0e0d1",
+                      "surface-container-high": "#f6e5d7",
+                      "outline": "#867369",
+                      "surface": "#fff8f4",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#723702",
+                      "secondary": "#506443",
+                      "background": "#fff8f4",
+                      "inverse-surface": "#382f25",
+                      "secondary-container": "#d2eabf",
+                      "inverse-on-surface": "#ffeedf",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#311300",
+                      "surface-bright": "#fff8f4",
+                      "on-background": "#221a11",
+                      "secondary-fixed": "#d2eabf",
+                      "tertiary-container": "#8c6e5f",
+                      "tertiary": "#715647",
+                      "on-surface-variant": "#53443a",
+                      "primary": "#8c4b18",
+                      "on-secondary-fixed": "#0e2006",
+                      "primary-fixed-dim": "#ffb787",
+                      "on-tertiary-container": "#fffbff",
+                      "on-error": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#ffdcc7",
+                      "secondary-fixed-dim": "#b7cea5",
+                      "on-secondary-container": "#566a48",
+                      "tertiary-fixed": "#ffdbc9",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#8f4d1a",
+                      "on-tertiary-fixed-variant": "#5a4133",
+                      "surface-dim": "#e8d7c9",
+                      "on-tertiary-fixed": "#2a170b",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#aa632e",
+                      "surface-container": "#fcebdc",
+                      "surface-container-highest": "#f0e0d1",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#221a11",
+                      "inverse-primary": "#ffb787",
+                      "on-secondary-fixed-variant": "#394c2d",
+                      "on-primary-container": "#fffbff",
+                      "tertiary-fixed-dim": "#e3bfad"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "grid-gutter": "24px",
+                      "base": "8px",
+                      "section-gap-mobile": "64px",
+                      "grid-margin": "40px",
+                      "section-gap-desktop": "128px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Syne"
+                      ],
+                      "headline-lg-mobile": [
+                              "Syne"
+                      ],
+                      "headline-lg": [
+                              "Syne"
+                      ],
+                      "display-lg": [
+                              "Syne"
+                      ],
+                      "body-md": [
+                              "\"Source Sans 3\""
+                      ],
+                      "body-lg": [
+                              "\"Source Sans 3\""
+                      ],
+                      "label-md": [
+                              "\"Source Sans 3\""
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0 10px 30px -5px rgba(45, 36, 27, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="bg-background dark:bg-background w-full top-0 flat no shadows z-50 sticky transition-all duration-300" id="main-nav">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-grid-margin py-6 w-full">
+<a class="text-headline-md font-headline-md text-primary dark:text-inverse-primary tracking-tight cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300" href="#">
+                Artisan Earth &amp; Timber
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300" href="#">Collections</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300" href="#">Our Story</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300" href="#">Craftsmanship</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300" href="#">Custom Orders</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300" href="#">Journal</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-primary dark:text-inverse-primary cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-primary dark:text-inverse-primary cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:bg-primary-container transition-colors duration-300 cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 transition-opacity duration-300">
+                    Inquire
+                </button>
+<button class="md:hidden text-primary dark:text-inverse-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-on-background/40 z-10"></div>
+<img alt="Production &amp; Shipping Hero" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="relative z-20 text-center px-grid-margin max-w-4xl mx-auto flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-6 drop-shadow-md">Production &amp; Shipping</h1>
+<p class="font-body-lg text-body-lg text-surface-container max-w-2xl text-center">
+                From reclaimed wood to your home: a transparent journey of craftsmanship, sustainability, and care.
+            </p>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full">
+<!-- Timeline Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-grid-margin max-w-[1440px] mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Our Transparent Process</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    We believe in complete transparency. Here's exactly how your furniture goes from reclaimed wood to a finished masterpiece.
+                </p>
+</div>
+<!-- Bento Timeline Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter relative">
+<!-- Decorative Line (Desktop) -->
+<div class="hidden md:block absolute top-[60px] left-[10%] right-[10%] h-[1px] bg-outline-variant z-0"></div>
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 ambient-shadow relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-secondary flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[32px] filled">energy_savings_leaf</span>
+</div>
+<span class="font-label-md text-label-md text-outline mb-2">STEP 01</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Sourcing Recycled Teak</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We responsibly source premium recycled teak wood, ensuring sustainability and rich character in every piece.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 ambient-shadow relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[32px] filled">handyman</span>
+</div>
+<span class="font-label-md text-label-md text-outline mb-2">STEP 02</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Artisan Crafting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Master artisans meticulously shape and assemble the wood using traditional, time-honored joinery techniques.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 ambient-shadow relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[32px] filled">shield</span>
+</div>
+<span class="font-label-md text-label-md text-outline mb-2">STEP 03</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Quality Finishing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Each piece undergoes rigorous hand-sanding and finishing to highlight the natural grain and ensure durability.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 ambient-shadow relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-secondary flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[32px] filled">local_shipping</span>
+</div>
+<span class="font-label-md text-label-md text-outline mb-2">STEP 04</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Global Shipping</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Carefully packaged and securely shipped globally, delivering artisanal quality directly to your doorstep.</p>
+</div>
+</div>
+</section>
+<!-- Craftsmanship Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low px-grid-margin">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-grid-gutter items-center">
+<div class="md:col-span-5 md:col-start-2 order-2 md:order-1">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Craftsmanship in Every Detail</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Our commitment to quality goes beyond the surface. We employ techniques passed down through generations to create furniture that lasts lifetimes.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-4 mt-1">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-background mb-1">Traditional Joinery</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Mortise and tenon joints ensure unmatched structural integrity.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-4 mt-1">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-background mb-1">Meticulous Hand-Sanding</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Multi-stage sanding reveals the deep, rich texture of reclaimed teak.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-4 mt-1">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-background mb-1">Rigorous Inspection</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Every millimeter is examined by master craftsmen before approval.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="md:col-span-5 md:col-start-8 order-1 md:order-2 mb-10 md:mb-0">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden ambient-shadow">
+<img alt="Artisan Craftsmanship Detail" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Gallery -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-grid-margin max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
+<div class="md:col-span-1 md:row-span-1 rounded-xl overflow-hidden ambient-shadow group relative">
+<div class="absolute inset-0 bg-on-background/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+<img alt="Artisan Workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="md:col-span-2 md:row-span-2 rounded-xl overflow-hidden ambient-shadow group relative">
+<div class="absolute inset-0 bg-on-background/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+<img alt="Warehouse Facility" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="md:col-span-1 md:row-span-1 rounded-xl overflow-hidden ambient-shadow group relative">
+<div class="absolute inset-0 bg-on-background/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+<img alt="Furniture Delivery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="md:col-span-2 md:row-span-1 rounded-xl overflow-hidden ambient-shadow group relative">
+<div class="absolute inset-0 bg-on-background/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+<img alt="Happy Customer with Furniture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+</div>
+</section>
+<!-- Global Shipping & Logistics Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface px-grid-margin">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Global Shipping</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        We ship worldwide, ensuring your furniture arrives in perfect condition.
+                    </p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 md:p-10 ambient-shadow">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
+<div class="rounded-xl overflow-hidden aspect-square">
+<img alt="Furniture Packaging Detail 1" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="rounded-xl overflow-hidden aspect-square">
+<img alt="Loading Shipping Truck" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="rounded-xl overflow-hidden aspect-square">
+<img alt="Furniture Packaging Detail 2" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="rounded-xl overflow-hidden aspect-square">
+<img alt="Shipping Container" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container w-full flat no shadows mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter max-w-[1440px] mx-auto px-10 py-section-gap-desktop">
+<div class="col-span-1 md:col-span-4 mb-8">
+<span class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim">Artisan Earth &amp; Timber</span>
+</div>
+<div class="col-span-1">
+<a class="block text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md mb-4" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1">
+<a class="block text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md mb-4" href="#">Privacy Policy</a>
+</div>
+<div class="col-span-1">
+<a class="block text-primary dark:text-primary-fixed-dim font-bold transition-colors duration-200 cursor-pointer font-label-md text-label-md mb-4" href="#">Shipping &amp; Returns</a>
+</div>
+<div class="col-span-1">
+<a class="block text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md mb-4" href="#">Contact Us</a>
+<a class="block text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md" href="#">Sustainability Report</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/30">
+<p class="text-tertiary dark:text-tertiary-fixed-dim font-body-md text-body-md">© 2024 Artisan Earth &amp; Timber. Sustainable Indonesian Craftsmanship.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple header background change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

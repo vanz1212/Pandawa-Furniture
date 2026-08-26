@@ -24,6 +24,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    allowedHosts: true,
+    hmr: {
+      clientPort: 443
+    }
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src/app'),

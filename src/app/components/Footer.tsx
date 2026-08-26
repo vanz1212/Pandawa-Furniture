@@ -1,75 +1,67 @@
 import { Link } from 'react-router';
-import { Instagram, Mail, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Instagram, Mail, MessageCircle } from 'lucide-react';
 
 export function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-[var(--color-wood-dark)] text-[var(--color-cream)] mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="col-span-1">
-            <div className="text-2xl tracking-wider mb-2">PANDAWA</div>
-            <div className="text-xs uppercase tracking-widest opacity-70 mb-4">Furniture</div>
-            <p className="text-sm opacity-80 leading-relaxed">
-              {t('footer.desc')}
-            </p>
-          </div>
+    <footer className="bg-surface-container-high dark:bg-surface-container-lowest w-full pt-section-gap-desktop pb-12">
+      <div className="max-w-7xl mx-auto px-grid-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+        {/* Brand */}
+        <div className="col-span-1 lg:col-span-1">
+          <h3 className="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-2 tracking-wider">PANDAWA</h3>
+          <h4 className="text-xs uppercase tracking-widest text-primary dark:text-primary-fixed-dim mb-4 opacity-70">Furniture</h4>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+            {t('footer.desc')}
+          </p>
+        </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4">{t('footer.quickLinks.title')}</h4>
-            <ul className="space-y-2 text-sm opacity-80">
-              <li><Link to="/" className="hover:opacity-100 transition-opacity">{t('nav.home')}</Link></li>
-              <li><Link to="/about" className="hover:opacity-100 transition-opacity">{t('nav.about')}</Link></li>
-              <li><Link to="/products" className="hover:opacity-100 transition-opacity">{t('nav.products')}</Link></li>
-              <li><Link to="/production" className="hover:opacity-100 transition-opacity">{t('nav.production')}</Link></li>
-            </ul>
-          </div>
+        {/* Quick Links */}
+        <div>
+          <h4 className="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold mb-4 uppercase tracking-wider">{t('footer.quickLinks.title')}</h4>
+          <ul className="space-y-3 font-body-md text-body-md">
+            <li><Link className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out" to="/">{t('nav.home')}</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out" to="/about">{t('nav.about')}</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out" to="/products">{t('nav.products')}</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out" to="/production">{t('nav.production')}</Link></li>
+          </ul>
+        </div>
 
-          {/* Sustainability */}
-          <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4">{t('footer.commitment.title')}</h4>
-            <ul className="space-y-2 text-sm opacity-80">
-              <li>{t('footer.commitment.item1')}</li>
-              <li>{t('footer.commitment.item2')}</li>
-              <li>{t('footer.commitment.item3')}</li>
-              <li>{t('footer.commitment.item4')}</li>
-            </ul>
-          </div>
+        {/* Sustainability */}
+        <div>
+          <h4 className="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold mb-4 uppercase tracking-wider">{t('footer.commitment.title')}</h4>
+          <ul className="space-y-3 font-body-md text-body-md text-on-surface-variant">
+            <li>{t('footer.commitment.item1')}</li>
+            <li>{t('footer.commitment.item2')}</li>
+            <li>{t('footer.commitment.item3')}</li>
+            <li>{t('footer.commitment.item4')}</li>
+          </ul>
+        </div>
 
-          {/* Contact & Location */}
-          <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4">{t('footer.connect.title')}</h4>
-            <div className="space-y-3 mb-2">
-              <a 
-                href="https://wa.me/" 
-                className="flex items-center space-x-2 text-sm opacity-80 hover:opacity-100 transition-opacity"
-              >
-                <MessageCircle size={18} />
-                <span>{t('footer.connect.whatsapp')}</span>
+        {/* Contact */}
+        <div>
+          <h4 className="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold mb-4 uppercase tracking-wider">{t('footer.connect.title')}</h4>
+          <div className="space-y-3 font-body-md text-body-md mb-6">
+            <a href="https://wa.me/" className="flex items-center space-x-2 text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out">
+              <MessageCircle size={18} />
+              <span>{t('footer.connect.whatsapp')}</span>
+            </a>
+            <a href="mailto:alexpandawa@gmail.com" className="flex items-center space-x-2 text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out">
+              <Mail size={18} />
+              <span>{t('footer.connect.email')}</span>
+            </a>
+            <div className="flex space-x-4 mt-4">
+              <a href="#" className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out">
+                <Instagram size={20} />
               </a>
-              <a 
-                href="mailto:info@pandawafurniture.com" 
-                className="flex items-center space-x-2 text-sm opacity-80 hover:opacity-100 transition-opacity"
-              >
-                <Mail size={18} />
-                <span>{t('footer.connect.email')}</span>
-              </a>
-              <div className="flex space-x-4">
-                <a href="#" className="opacity-80 hover:opacity-100 transition-opacity">
-                  <Instagram size={20} />
-                </a>
-              </div>
             </div>
           </div>
         </div>
-
-        <div className="border-t border-[var(--color-wood-medium)] mt-8 pt-8 text-center text-sm opacity-70">
-          <p>{t('footer.copyright')}</p>
-        </div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-grid-margin mt-12 pt-8 border-t border-brand-cocoa-brown/10 text-center text-sm text-on-surface-variant">
+        <p>{t('footer.copyright')}</p>
       </div>
     </footer>
   );

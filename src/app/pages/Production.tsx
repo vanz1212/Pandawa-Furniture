@@ -1,204 +1,174 @@
-import productionHeroImg from '../assets/production-hero.jpeg';
-import image_e77818745e813bf5ce0d49cc96412216566da6c8 from '../assets/e77818745e813bf5ce0d49cc96412216566da6c8.png';
-import image_1aad063b976faef1f4b68af17eca100c145ee9a7 from '../assets/1aad063b976faef1f4b68af17eca100c145ee9a7.png';
-import image_ea4e0d3666996065ddeb190c4028a8c43ca1eab2 from '../assets/ea4e0d3666996065ddeb190c4028a8c43ca1eab2.png';
-import image_f5553a4a208f9b99979e04e8268a24f5a5feabcd from '../assets/f5553a4a208f9b99979e04e8268a24f5a5feabcd.png';
-import image_61f250a254b4a06e52d903637392bbace611f978 from '../assets/61f250a254b4a06e52d903637392bbace611f978.png';
-import image_621d39621b0ef347797640e713ebeb2bd5c51081 from '../assets/621d39621b0ef347797640e713ebeb2bd5c51081.png';
-import image_810c3ec98355f08a9c766659a6ea0cd9314b15ac from '../assets/810c3ec98355f08a9c766659a6ea0cd9314b15ac.png';
-import image_ba07c6ac9f6733b987465b474d9baa59a1afefd6 from '../assets/ba07c6ac9f6733b987465b474d9baa59a1afefd6.png';
-import image_08deb210930238d0b61573463464031a301d6be3 from '../assets/08deb210930238d0b61573463464031a301d6be3.png';
-import { Leaf, Hammer, Shield, Truck } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { useTranslation } from 'react-i18next';
+import productionHeroImg from '../assets/production-hero.jpeg';
+import image_08deb210930238d0b61573463464031a301d6be3 from '../assets/08deb210930238d0b61573463464031a301d6be3.png';
+import image_f5553a4a208f9b99979e04e8268a24f5a5feabcd from '../assets/f5553a4a208f9b99979e04e8268a24f5a5feabcd.png';
+import image_ea4e0d3666996065ddeb190c4028a8c43ca1eab2 from '../assets/ea4e0d3666996065ddeb190c4028a8c43ca1eab2.png';
+import image_1aad063b976faef1f4b68af17eca100c145ee9a7 from '../assets/1aad063b976faef1f4b68af17eca100c145ee9a7.png';
+import image_e77818745e813bf5ce0d49cc96412216566da6c8 from '../assets/e77818745e813bf5ce0d49cc96412216566da6c8.png';
+import image_810c3ec98355f08a9c766659a6ea0cd9314b15ac from '../assets/810c3ec98355f08a9c766659a6ea0cd9314b15ac.png';
+import image_ba07c6ac9f6733b987465b474d9baa59a1afefd6 from '../assets/ba07c6ac9f6733b987465b474d9baa59a1afefd6.png';
+import image_621d39621b0ef347797640e713ebeb2bd5c51081 from '../assets/621d39621b0ef347797640e713ebeb2bd5c51081.png';
+import image_61f250a254b4a06e52d903637392bbace611f978 from '../assets/61f250a254b4a06e52d903637392bbace611f978.png';
 
 export function Production() {
   const { t } = useTranslation();
 
-  const processSteps = [
-    {
-      icon: Leaf,
-      title: t('production.process.steps.s1.title'),
-      description: t('production.process.steps.s1.desc'),
-      color: 'var(--color-green-deep)',
-    },
-    {
-      icon: Hammer,
-      title: t('production.process.steps.s2.title'),
-      description: t('production.process.steps.s2.desc'),
-      color: 'var(--color-wood-medium)',
-    },
-    {
-      icon: Shield,
-      title: t('production.process.steps.s3.title'),
-      description: t('production.process.steps.s3.desc'),
-      color: 'var(--color-wood-dark)',
-    },
-    {
-      icon: Truck,
-      title: t('production.process.steps.s4.title'),
-      description: t('production.process.steps.s4.desc'),
-      color: 'var(--color-green-medium)',
-    },
-  ];
-
   return (
-    <div>
+    <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src={productionHeroImg}
-            alt="Production & Shipping"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-brand-dark-earth/60 z-10"></div>
+          <ImageWithFallback src={productionHeroImg} alt="Production & Shipping Hero" className="w-full h-full object-cover" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
-          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">{t('production.hero.title')}</h1>
-          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">{t('production.hero.desc')}</p>
+        <div className="relative z-20 text-center px-grid-margin max-w-4xl mx-auto flex flex-col items-center">
+          <h1 className="font-display-lg text-display-lg text-white mb-6 drop-shadow-md">{t('production.hero.title')}</h1>
+          <p className="font-body-lg text-body-lg text-brand-cream/90 max-w-2xl text-center drop-shadow-md">
+            {t('production.hero.desc')}
+          </p>
         </div>
       </section>
 
-      {/* Process Timeline */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="mb-4">{t('production.process.title')}</h2>
-            <p className="text-lg opacity-80 max-w-3xl mx-auto">
-              {t('production.process.desc')}
+      {/* Timeline Section */}
+      <section className="py-section-gap-desktop px-grid-margin max-w-7xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="font-headline-lg text-[32px] md:text-headline-lg text-brand-dark-earth mb-4">{t('production.process.title')}</h2>
+          <p className="font-body-md text-body-md text-brand-dark-earth/70">
+            {t('production.process.desc')}
+          </p>
+        </div>
+
+        {/* Bento Timeline Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter relative">
+          {/* Decorative Line (Desktop) */}
+          <div className="hidden md:block absolute top-[60px] left-[10%] right-[10%] h-[1px] bg-brand-cocoa-brown/20 z-0"></div>
+
+          {/* Step 1 */}
+          <div className="bg-white rounded-xl p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+            <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 text-brand-deep-olive flex items-center justify-center mb-6 shadow-sm">
+              <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>energy_savings_leaf</span>
+            </div>
+            <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 01</span>
+            <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s1.title')}</h3>
+            <p className="font-body-md text-sm text-brand-dark-earth/70">{t('production.process.steps.s1.desc')}</p>
+          </div>
+
+          {/* Step 2 */}
+          <div className="bg-white rounded-xl p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+            <div className="w-16 h-16 rounded-full bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center mb-6 shadow-sm">
+              <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>handyman</span>
+            </div>
+            <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 02</span>
+            <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s2.title')}</h3>
+            <p className="font-body-md text-sm text-brand-dark-earth/70">{t('production.process.steps.s2.desc')}</p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="bg-white rounded-xl p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+            <div className="w-16 h-16 rounded-full bg-brand-cocoa-brown text-white flex items-center justify-center mb-6 shadow-sm">
+              <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>shield</span>
+            </div>
+            <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 03</span>
+            <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s3.title')}</h3>
+            <p className="font-body-md text-sm text-brand-dark-earth/70">{t('production.process.steps.s3.desc')}</p>
+          </div>
+
+          {/* Step 4 */}
+          <div className="bg-white rounded-xl p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+            <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 text-brand-deep-olive flex items-center justify-center mb-6 shadow-sm">
+              <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>local_shipping</span>
+            </div>
+            <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 04</span>
+            <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s4.title')}</h3>
+            <p className="font-body-md text-sm text-brand-dark-earth/70">{t('production.process.steps.s4.desc')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Craftsmanship Section */}
+      <section className="py-section-gap-desktop bg-[#fff1e6] px-6 md:px-16 lg:px-24">
+        <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24 items-center">
+          <div className="md:col-span-5 order-2 md:order-1 flex flex-col justify-center">
+            <h2 className="font-headline-lg text-[32px] md:text-headline-lg text-brand-dark-earth mb-6">{t('production.craft.title')}</h2>
+            <p className="font-body-md text-body-md text-brand-dark-earth/70 mb-8">
+              {t('production.craft.desc1')}
             </p>
+            <ul className="space-y-6">
+              <li className="flex items-start">
+                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>check_circle</span>
+                <div>
+                  <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point1')}</h4>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>check_circle</span>
+                <div>
+                  <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point2')}</h4>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>check_circle</span>
+                <div>
+                  <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point3')}</h4>
+                </div>
+              </li>
+            </ul>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => {
-              const IconComponent = step.icon;
-              return (
-                <div key={index} className="relative">
-                  {/* Connector Line - Desktop */}
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-[var(--color-cream-dark)]"></div>
-                  )}
-                  
-                  <div className="relative z-10 text-center">
-                    <div
-                      className="inline-flex items-center justify-center w-24 h-24 rounded-full mb-6 shadow-lg"
-                      style={{ backgroundColor: step.color }}
-                    >
-                      <IconComponent className="text-[var(--color-cream)]" size={40} />
-                    </div>
-                    <div className="mb-2 text-sm uppercase tracking-wider opacity-50">
-                      Step {index + 1}
-                    </div>
-                    <h3 className="mb-3">{step.title}</h3>
-                    <p className="opacity-70 text-sm leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Visual Section */}
-      <section className="py-20 bg-[var(--color-cream-dark)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="mb-6">{t('production.craft.title')}</h2>
-              <p className="text-lg mb-4 opacity-80">{t('production.craft.desc1')}</p>
-              <p className="text-lg mb-6 opacity-80">
-                {t('production.craft.desc2')}
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-green-deep)]"></div>
-                  <span>{t('production.craft.point1')}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-green-deep)]"></div>
-                  <span>{t('production.craft.point2')}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-green-deep)]"></div>
-                  <span>{t('production.craft.point3')}</span>
-                </div>
-                
-              </div>
-            </div>
-            <div>
-              <ImageWithFallback
-                src={image_08deb210930238d0b61573463464031a301d6be3}
-                alt="Artisan craftsmanship"
-                className="w-full h-[500px] object-cover shadow-2xl"
-              />
+          <div className="md:col-span-7 order-1 md:order-2 mb-10 md:mb-0">
+            <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-[600px] rounded-xl overflow-hidden shadow-level2 group">
+              <ImageWithFallback src={image_08deb210930238d0b61573463464031a301d6be3} alt="Artisan Craftsmanship Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Values - Icons */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ImageWithFallback
-              src={image_f5553a4a208f9b99979e04e8268a24f5a5feabcd}
-              alt="Happy customer"
-              className="w-full h-[280px] object-cover shadow-lg"
-            />
-            <ImageWithFallback
-              src={image_ea4e0d3666996065ddeb190c4028a8c43ca1eab2}
-              alt="Warehouse facility"
-              className="w-full h-[280px] object-cover shadow-lg"
-            />
-            <ImageWithFallback
-              src={image_1aad063b976faef1f4b68af17eca100c145ee9a7}
-              alt="Customer receiving delivery"
-              className="w-full h-[280px] object-cover shadow-lg"
-            />
-            <ImageWithFallback
-              src={image_e77818745e813bf5ce0d49cc96412216566da6c8}
-              alt="Workshop facility"
-              className="w-full h-[280px] object-cover shadow-lg"
-            />
+      {/* Visual Gallery */}
+      <section className="py-section-gap-desktop px-grid-margin max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[300px]">
+          <div className="md:col-span-1 md:row-span-1 rounded-xl overflow-hidden shadow-level1 group relative">
+            <div className="absolute inset-0 bg-brand-dark-earth/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
+            <ImageWithFallback src={image_f5553a4a208f9b99979e04e8268a24f5a5feabcd} alt="Artisan Workshop" className="w-full h-[300px] md:h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </div>
+          <div className="md:col-span-2 md:row-span-2 rounded-xl overflow-hidden shadow-level1 group relative">
+            <div className="absolute inset-0 bg-brand-dark-earth/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
+            <ImageWithFallback src={image_ea4e0d3666996065ddeb190c4028a8c43ca1eab2} alt="Warehouse Facility" className="w-full h-[300px] md:h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </div>
+          <div className="md:col-span-1 md:row-span-1 rounded-xl overflow-hidden shadow-level1 group relative">
+            <div className="absolute inset-0 bg-brand-dark-earth/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
+            <ImageWithFallback src={image_1aad063b976faef1f4b68af17eca100c145ee9a7} alt="Furniture Delivery" className="w-full h-[300px] md:h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </div>
+          <div className="md:col-span-2 md:row-span-1 rounded-xl overflow-hidden shadow-level1 group relative">
+            <div className="absolute inset-0 bg-brand-dark-earth/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
+            <ImageWithFallback src={image_e77818745e813bf5ce0d49cc96412216566da6c8} alt="Happy Customer with Furniture" className="w-full h-[300px] md:h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           </div>
         </div>
       </section>
 
-      {/* Shipping Details */}
-      <section className="py-20 bg-[var(--color-cream)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="mb-6">{t('production.shipping.title')}</h2>
-            <p className="text-lg opacity-80">
+      {/* Global Shipping & Logistics Section */}
+      <section className="py-section-gap-desktop bg-[#fff8f4] px-grid-margin">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="font-headline-lg text-[32px] md:text-headline-lg text-brand-dark-earth mb-4">{t('production.shipping.title')}</h2>
+            <p className="font-body-md text-body-md text-brand-dark-earth/70">
               {t('production.shipping.desc')}
             </p>
           </div>
-
-          <div className="bg-white p-8 shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <ImageWithFallback
-                src={image_810c3ec98355f08a9c766659a6ea0cd9314b15ac}
-                alt="Furniture packaging"
-                className="w-full h-[300px] object-cover"
-              />
-              <ImageWithFallback
-                src={image_ba07c6ac9f6733b987465b474d9baa59a1afefd6}
-                alt="Loading truck"
-                className="w-full h-[300px] object-cover"
-              />
-              <ImageWithFallback
-                src={image_621d39621b0ef347797640e713ebeb2bd5c51081}
-                alt="Protective packaging"
-                className="w-full h-[300px] object-cover"
-              />
-              <ImageWithFallback
-                src={image_61f250a254b4a06e52d903637392bbace611f978}
-                alt="Container loading"
-                className="w-full h-[300px] object-cover"
-              />
+          
+          <div className="bg-white rounded-2xl p-6 md:p-10 shadow-level2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+              <div className="rounded-xl overflow-hidden aspect-square group">
+                <ImageWithFallback src={image_810c3ec98355f08a9c766659a6ea0cd9314b15ac} alt="Furniture Packaging Detail 1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="rounded-xl overflow-hidden aspect-square group">
+                <ImageWithFallback src={image_ba07c6ac9f6733b987465b474d9baa59a1afefd6} alt="Loading Shipping Truck" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="rounded-xl overflow-hidden aspect-square group">
+                <ImageWithFallback src={image_621d39621b0ef347797640e713ebeb2bd5c51081} alt="Furniture Packaging Detail 2" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="rounded-xl overflow-hidden aspect-square group">
+                <ImageWithFallback src={image_61f250a254b4a06e52d903637392bbace611f978} alt="Shipping Container" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
             </div>
           </div>
         </div>
