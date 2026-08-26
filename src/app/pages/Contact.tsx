@@ -6,8 +6,11 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div>
       {/* Hero Section */}
@@ -22,11 +25,10 @@ export function Contact() {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
           <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">
-            Get in Touch
+            {t('contact.hero.title')}
           </h1>
           <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">
-            Let's discuss your custom furniture project. We're
-            here to bring your vision to life.
+            {t('contact.hero.desc')}
           </p>
         </div>
       </section>
@@ -44,21 +46,17 @@ export function Contact() {
                 />
               </div>
               <h3 className="mb-3">
-                WhatsApp for Fast Response
+                {t('contact.methods.wa.title')}
               </h3>
               <p className="mb-4 opacity-70">
-                The quickest way to reach us for custom design
-                discussions, questions, or urgent inquiries.
+                {t('contact.methods.wa.desc')}
               </p>
               <a
                 href="https://wa.me/6285168628421"
                 className="inline-block bg-green-500 text-white px-6 py-3 tracking-wide hover:bg-green-600 transition-colors"
               >
-                Chat on WhatsApp
+                {t('contact.methods.wa.button')}
               </a>
-              <p className="mt-3 text-sm opacity-60">
-                +62 851-6862-8421
-              </p>
             </div>
 
             {/* Email - Secondary */}
@@ -70,21 +68,17 @@ export function Contact() {
                 />
               </div>
               <h3 className="mb-3">
-                Email for Official Inquiries
+                {t('contact.methods.email.title')}
               </h3>
               <p className="mb-4 opacity-70">
-                For detailed project proposals, quotes, and
-                formal correspondence.
+                {t('contact.methods.email.desc')}
               </p>
               <a
-                href="mailto:yusavitocompanies@gmail.com"
+                href="mailto:alexpandawa@gmail.com"
                 className="inline-block bg-[var(--color-green-deep)] text-[var(--color-cream)] px-6 py-3 tracking-wide hover:bg-[var(--color-green-medium)] transition-colors"
               >
-                Send Email
+                {t('contact.methods.email.button')}
               </a>
-              <p className="mt-3 text-sm opacity-60">
-                yusavitocompanies@gmail.com
-              </p>
             </div>
           </div>
         </div>
@@ -101,11 +95,10 @@ export function Contact() {
                   size={24}
                 />
               </div>
-              <h3 className="mb-2">Location</h3>
+              <h3 className="mb-2">{t('contact.info.location')}</h3>
               <p className="opacity-70 text-sm">
-                Kudus, Central Java
-                <br />
-                Indonesia
+                Jln. Lingkar Selatan Kudus-Jepara km 3,<br />
+                Desa Pasuruhan kidul, Kota Kudus
               </p>
             </div>
 
@@ -116,7 +109,7 @@ export function Contact() {
                   size={24}
                 />
               </div>
-              <h3 className="mb-2">Phone</h3>
+              <h3 className="mb-2">{t('contact.info.phone')}</h3>
               <p className="opacity-70 text-sm">
                 +62 851-6862-8421
                 <br />
@@ -130,9 +123,9 @@ export function Contact() {
                   size={24}
                 />
               </div>
-              <h3 className="mb-2">Email</h3>
+              <h3 className="mb-2">{t('contact.info.email')}</h3>
               <p className="opacity-70 text-sm">
-                yusavitocompanies@gmail.com
+                alexpandawa@gmail.com
                 <br />
               </p>
             </div>

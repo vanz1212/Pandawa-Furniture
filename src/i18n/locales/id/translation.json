@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "products": "Produk",
+    "production": "Produksi & Pengiriman",
+    "contact": "Kontak"
+  },
+  "footer": {
+    "desc": "Keanggunan abadi dari kayu jati daur ulang Indonesia.",
+    "quickLinks": {
+      "title": "Tautan Cepat"
+    },
+    "commitment": {
+      "title": "Komitmen Kami",
+      "item1": "100% Jati Daur Ulang",
+      "item2": "Praktik Berkelanjutan",
+      "item3": "Dukungan Pengrajin Lokal",
+      "item4": "Finishing Ramah Lingkungan"
+    },
+    "connect": {
+      "title": "Hubungi & Kunjungi",
+      "whatsapp": "WhatsApp",
+      "email": "Email Kami",
+      "locationTitle": "Lokasi",
+      "locationDesc": "Jln. Lingkar Selatan Kudus-Jepara km 3, Desa Pasuruhan kidul, Kota Kudus"
+    },
+    "copyright": "2026 Pandawa Furniture. Dibuat dengan sepenuh hati di Indonesia."
+  },
+  "home": {
+    "hero": {
+      "title": "Karya Abadi, Menyatu dengan Alam",
+      "desc": "Di mana keahlian warisan bertemu dengan kemewahan yang berkelanjutan. Setiap karya menceritakan kisah alam, tradisi, dan kehidupan modern.",
+      "explore": "Jelajahi Koleksi",
+      "chat": "Hubungi Kami"
+    },
+    "values": {
+      "title1": "Bersumber dari Alam",
+      "desc1": "Menghargai keindahan sumber daya alam Indonesia melalui pengerjaan yang bertanggung jawab.",
+      "title2": "Dibuat oleh Pengrajin",
+      "desc2": "Berkolaborasi dengan pengrajin lokal Indonesia, memberdayakan komunitas dan melestarikan keterampilan tradisional.",
+      "title3": "Desain Sesuai Pesanan",
+      "desc3": "Setiap karya dapat disesuaikan dengan visi Anda, menciptakan furnitur yang unik milik Anda."
+    },
+    "collection": {
+      "title": "Sample Collection",
+      "viewAll": "Lihat Katalog Lengkap"
+    },
+    "cta": {
+      "title": "Wujudkan Detail Impian Anda",
+      "desc": "Mari diskusikan visi Anda dan ciptakan furnitur yang sesuai dengan ruang dan gaya Anda.",
+      "button": "Mulai Pesanan Khusus"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Tentang Pandawa Furniture",
+      "desc": "Warisan keluarga yang berakar pada keahlian pengerjaan kayu Indonesia, keberlanjutan, dan keindahan furnitur jati yang tak lekang oleh waktu"
+    },
+    "foundation": {
+      "title": "Fondasi Kami",
+      "desc": "Pandawa Furniture dibangun di atas tiga pilar utama yang mendefinisikan siapa kami dan apa yang kami ciptakan."
+    },
+    "pillar1": {
+      "title": "Bisnis Keluarga",
+      "desc": "Warisan milik keluarga yang berakar pada tradisi pertukangan kayu Indonesia. Kami berkolaborasi dengan pengrajin lokal untuk melestarikan keterampilan yang diwariskan dari generasi ke generasi."
+    },
+    "pillar2": {
+      "title": "100% Kayu Daur Ulang",
+      "desc": "Kami berkomitmen pada keberlanjutan dengan menggunakan kayu jati daur ulang, melindungi hutan hujan Indonesia dan mengurangi dampak lingkungan."
+    },
+    "pillar3": {
+      "title": "Keistimewaan Kayu Jati Lama",
+      "desc": "Kayu jati daur ulang yang sudah tua memiliki tekstur unik dan daya tahan yang luar biasa. Jejak sejarah dan cuaca membuat setiap karya menjadi lebih kuat, indah, dan benar-benar unik."
+    }
+  },
+  "products": {
+    "hero": {
+      "title": "Koleksi Kami",
+      "desc": "Temukan furnitur yang memadukan warisan Indonesia dengan desain kontemporer."
+    },
+    "notice": {
+      "title": "Kami Spesialis Desain Sesuai Pesanan",
+      "desc1": "Katalog di bawah ini mewakili pilihan kurasi dari kemampuan dan kategori furnitur kami. Namun, hasrat sejati kami terletak pada pembuatan <strong>karya khusus sesuai pesanan</strong> yang disesuaikan secara khusus dengan visi, ruang, dan gaya hidup Anda.",
+      "desc2": "Kami mengundang Anda untuk <strong>mendiskusikan kebutuhan spesifik Anda bersama kami</strong> guna menciptakan karya yang benar-benar unik yang mencerminkan gaya pribadi Anda dan menghargai tradisi pengrajin kayu Indonesia.",
+      "button": "Mulai Desain Khusus Anda"
+    },
+    "tabs": {
+      "All": "Semua",
+      "Tables": "Meja",
+      "Chairs": "Kursi",
+      "Cabinets": "Lemari",
+      "Accessories": "Aksesoris"
+    },
+    "empty": "Tidak ada produk yang ditemukan dalam kategori ini.",
+    "why": {
+      "title": "Mengapa Memilih Pandawa Furniture?",
+      "desc": "Di Pandawa Furniture, kami tidak sekadar membuat furnitur; kami melestarikan sejarah dan alam melalui setiap karya yang kami ciptakan. Inilah alasan mengapa kami adalah mitra terpercaya untuk kebutuhan interior Anda:",
+      "reason1": {
+        "title": "Satu Dekade Keahlian",
+        "desc": "Dengan lebih dari 10 tahun pengalaman khusus, kami telah menguasai seni mengolah kayu jati daur ulang, mengubah kayu bekas menjadi mahakarya abadi."
+      },
+      "reason2": {
+        "title": "Standar Kualitas Global",
+        "desc": "Keahlian kami telah melintasi batas, mendapatkan kepercayaan dan pengakuan di berbagai negara di seluruh dunia. Kami mempertahankan standar kualitas ekspor yang konsisten yang memenuhi permintaan pasar internasional."
+      },
+      "reason3": {
+        "title": "Solusi Desain Sesuai Pesanan",
+        "desc": "Kami percaya setiap ruang itu unik. Kami menawarkan konsultasi yang dipersonalisasi dan layanan pesanan khusus, memungkinkan Anda menyesuaikan desain yang sangat sesuai dengan kebutuhan spesifik dan visi estetika Anda."
+      },
+      "reason4": {
+        "title": "Memberdayakan Pengrajin Lokal",
+        "desc": "Setiap karya dibuat dengan tangan oleh pengrajin lokal Indonesia yang keterampilannya telah diwariskan dari generasi ke generasi. Keahlian mereka yang tak tertandingi memastikan bahwa setiap sambungan, tekstur, dan hasil akhir memiliki kualitas setinggi mungkin."
+      }
+    },
+    "proof": {
+      "title": "Foto & Bukti Nyata"
+    },
+    "cta": {
+      "title": "Siap Menciptakan Sesuatu yang Unik?",
+      "desc": "Mari berkolaborasi pada karya khusus yang sangat sesuai dengan ruang Anda dan menceritakan kisah Anda.",
+      "button": "Hubungi Kami"
+    },
+    "items": {
+      "p1": { "name": "Meja Makan Rustic", "desc": "Berkumpul di sekitar kehangatan jati daur ulang" },
+      "p2": { "name": "Kursi Santai Jati", "desc": "Kenyamanan bertemu keahlian pengrajin" },
+      "p3": { "name": "Wastafel Batu Air", "desc": "Keanggunan ukiran tangan untuk tempat perlindungan Anda" },
+      "p4": { "name": "Meja Kopi Minimalis", "desc": "Pusat perhatian yang memicu percakapan" },
+      "p5": { "name": "Dressoir Vintage", "desc": "Solusi elegan untuk hunian tertata" },
+      "p6": { "name": "Lemari Pakaian Kamar Tidur", "desc": "Beristirahat dalam keanggunan yang berkelanjutan" }
+    }
+  },
+  "production": {
+    "hero": {
+      "title": "Produksi & Pengiriman",
+      "desc": "Dari kayu daur ulang hingga ke rumah Anda sebuah perjalanan transparan dari keahlian, keberlanjutan, dan perhatian."
+    },
+    "process": {
+      "title": "Proses Transparan Kami",
+      "desc": "Kami percaya pada transparansi penuh. Berikut ini adalah persis bagaimana furnitur Anda dibuat dari kayu daur ulang menjadi mahakarya yang telah selesai.",
+      "steps": {
+        "s1": {
+          "title": "Sumber Jati Daur Ulang",
+          "desc": "Kami secara hati-hati mencari kayu jati yang direklamasi dari bangunan lama, perahu, dan struktur di seluruh Indonesia. Setiap potongan kayu diperiksa kualitas dan karakternya, memastikan memenuhi standar tinggi kami sambil menghormati kehidupan masa lalunya."
+        },
+        "s2": {
+          "title": "Pengerjaan Pengrajin",
+          "desc": "Pengrajin terampil Indonesia kami menggunakan teknik tradisional yang diwariskan dari generasi ke generasi. Setiap sambungan, kurva, dan permukaan dibentuk dengan cermat dengan tangan, menghidupkan desain modern sambil melestarikan keahlian yang telah lama ada."
+        },
+        "s3": {
+          "title": "Penyelesaian Berkualitas",
+          "desc": "Setiap karya menjalani proses penyelesaian yang teliti menggunakan perawatan ramah lingkungan yang melindungi kayu sekaligus meningkatkan keindahan alaminya. Kami menggunakan minyak dan pelapis berkelanjutan yang aman untuk rumah Anda dan lingkungan."
+        },
+        "s4": {
+          "title": "Pengiriman Global",
+          "desc": "Kami mengirimkan produk kami ke seluruh dunia dengan penyedia logistik terpercaya untuk memastikan furnitur Anda tiba dengan aman, di mana pun Anda berada. Kami telah mengirim ke berbagai negara seperti Inggris, Spanyol, Portugal, Taiwan, Belanda, dll. Setiap karya dikemas dengan hati-hati menggunakan bahan pelindung dan pelacakan disediakan untuk ketenangan pikiran sepenuhnya."
+        }
+      }
+    },
+    "craft": {
+      "title": "Keahlian di Setiap Detail",
+      "desc1": "Pengrajin kami tidak hanya membuat furnitur, mereka menghormati sejarah kayu dan menciptakan karya yang akan dihargai dari generasi ke generasi.",
+      "desc2": "Mulai dari memilih potongan jati daur ulang yang sempurna hingga sentuhan akhir gosokan tangan, setiap langkah dilakukan dengan perhatian, keterampilan, dan rasa hormat terhadap material dan seni pembuatan.",
+      "point1": "Teknik sambungan tradisional",
+      "point2": "Pengamplasan dan penyelesaian manual",
+      "point3": "Inspeksi kualitas di setiap tahap"
+    },
+    "shipping": {
+      "title": "Pengiriman Global",
+      "desc": "Kami melayani pengiriman ke seluruh dunia, memastikan furnitur Anda tiba dalam kondisi sempurna."
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Hubungi Kami",
+      "desc": "Mari diskusikan proyek furnitur khusus Anda. Kami siap mewujudkan visi Anda."
+    },
+    "methods": {
+      "wa": {
+        "title": "WhatsApp untuk Respon Cepat",
+        "desc": "Cara tercepat untuk menghubungi kami terkait diskusi desain khusus, pertanyaan, atau hal mendesak.",
+        "button": "Chat di WhatsApp"
+      },
+      "email": {
+        "title": "Email untuk Permintaan Resmi",
+        "desc": "Untuk proposal proyek rinci, penawaran harga, dan korespondensi formal.",
+        "button": "Kirim Email"
+      }
+    },
+    "info": {
+      "location": "Lokasi",
+      "phone": "Telepon",
+      "email": "Email"
+    }
+  },
+  "notFound": {
+    "title": "Halaman Tidak Ditemukan",
+    "desc": "Halaman yang Anda cari tidak ada.",
+    "button": "Kembali ke Beranda"
+  }
+}

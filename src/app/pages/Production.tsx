@@ -10,50 +10,35 @@ import image_ba07c6ac9f6733b987465b474d9baa59a1afefd6 from '../assets/ba07c6ac9f
 import image_08deb210930238d0b61573463464031a301d6be3 from '../assets/08deb210930238d0b61573463464031a301d6be3.png';
 import { Leaf, Hammer, Shield, Truck } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { useTranslation } from 'react-i18next';
 
 export function Production() {
+  const { t } = useTranslation();
+
   const processSteps = [
     {
       icon: Leaf,
-      title: 'Sourcing Recycled Teak',
-      description: 'We carefully source reclaimed teak from old buildings, boats, and structures across Indonesia. Each piece of wood is inspected for quality and character, ensuring it meets our high standards while honoring its past life.',
+      title: t('production.process.steps.s1.title'),
+      description: t('production.process.steps.s1.desc'),
       color: 'var(--color-green-deep)',
     },
     {
       icon: Hammer,
-      title: 'Artisan Crafting',
-      description: 'Our skilled Indonesian artisans using traditional techniques passed down through generations. Each joint, curve, and surface is carefully shaped by hand, bringing modern designs to life while preserving time-honored craftsmanship.',
+      title: t('production.process.steps.s2.title'),
+      description: t('production.process.steps.s2.desc'),
       color: 'var(--color-wood-medium)',
     },
     {
       icon: Shield,
-      title: 'Quality Finishing',
-      description: 'Every piece undergoes meticulous finishing using eco-friendly treatments that protect the wood while enhancing its natural beauty. We use sustainable oils and sealants that are safe for your home and the environment.',
+      title: t('production.process.steps.s3.title'),
+      description: t('production.process.steps.s3.desc'),
       color: 'var(--color-wood-dark)',
     },
     {
       icon: Truck,
-      title: 'Global Shipping',
-      description: 'We deliver our products across the worldwide with trusted logistic providers to ensure your furniture arrives safely, no matter where you are. We delivered across nation such as UK, Spain, Portugal, Taiwan, Netherland, etc. Each piece is carefully packaged with protective materials and tracking is provided for complete peace of mind.',
+      title: t('production.process.steps.s4.title'),
+      description: t('production.process.steps.s4.desc'),
       color: 'var(--color-green-medium)',
-    },
-  ];
-
-  const values = [
-    {
-      icon: '🌿',
-      title: 'Eco-Friendly',
-      description: 'Zero new trees cut. 100% recycled materials. Sustainable finishes and eco-conscious production methods.',
-    },
-    {
-      icon: '✋',
-      title: 'Handmade',
-      description: 'Crafted entirely by hand using traditional Indonesian woodworking techniques. No mass production.',
-    },
-    {
-      icon: '📦',
-      title: 'Safe Delivery',
-      description: 'Professional packaging, international shipping partners, full insurance, and tracking for every order.',
     },
   ];
 
@@ -70,8 +55,8 @@ export function Production() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
-          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">Production & Shipping</h1>
-          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">From reclaimed wood to your home a transparent journey of craftsmanship, sustainability, and care.</p>
+          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">{t('production.hero.title')}</h1>
+          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">{t('production.hero.desc')}</p>
         </div>
       </section>
 
@@ -79,9 +64,9 @@ export function Production() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Our Transparent Process</h2>
+            <h2 className="mb-4">{t('production.process.title')}</h2>
             <p className="text-lg opacity-80 max-w-3xl mx-auto">
-              We believe in complete transparency. Here's exactly how your furniture goes from reclaimed wood to a finished masterpiece.
+              {t('production.process.desc')}
             </p>
           </div>
 
@@ -122,23 +107,23 @@ export function Production() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="mb-6">Craftsmanship in Every Detail</h2>
-              <p className="text-lg mb-4 opacity-80">Our artisans don't just build furniture they honor the wood's history and create pieces that will be cherished for generations.</p>
+              <h2 className="mb-6">{t('production.craft.title')}</h2>
+              <p className="text-lg mb-4 opacity-80">{t('production.craft.desc1')}</p>
               <p className="text-lg mb-6 opacity-80">
-                From selecting the perfect piece of reclaimed teak to the final hand-rubbed finish, every step is performed with care, skill, and respect for both the material and the craft.
+                {t('production.craft.desc2')}
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 rounded-full bg-[var(--color-green-deep)]"></div>
-                  <span>Traditional joinery techniques</span>
+                  <span>{t('production.craft.point1')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 rounded-full bg-[var(--color-green-deep)]"></div>
-                  <span>Hand-sanding and finishing</span>
+                  <span>{t('production.craft.point2')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 rounded-full bg-[var(--color-green-deep)]"></div>
-                  <span>Quality inspection at every stage</span>
+                  <span>{t('production.craft.point3')}</span>
                 </div>
                 
               </div>
@@ -186,9 +171,9 @@ export function Production() {
       <section className="py-20 bg-[var(--color-cream)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="mb-6">Global Shipping </h2>
+            <h2 className="mb-6">{t('production.shipping.title')}</h2>
             <p className="text-lg opacity-80">
-              We ship worldwide, ensuring your furniture arrives in perfect condition.
+              {t('production.shipping.desc')}
             </p>
           </div>
 

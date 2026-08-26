@@ -2,8 +2,11 @@ import heroBg from '../assets/2874e70677e9347f1c498bc483444526782683b2.png';
 import { Link } from 'react-router';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Leaf, Users, Sparkles } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Home() {
+  const { t } = useTranslation();
+
   return (
     <div>
       {/* Hero Section */}
@@ -18,22 +21,22 @@ export function Home() {
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-[#fffcf2] drop-shadow-lg">
-          <h1 className="mb-6 font-[Alata] text-[#fffcf2] drop-shadow-xl">Timeless Craft, Naturally Involved</h1>
+          <h1 className="mb-6 font-[Alata] text-[#fffcf2] drop-shadow-xl">{t('home.hero.title')}</h1>
           <p className="text-xl mb-8 text-[#fffcf2]/95 max-w-2xl mx-auto text-center font-medium drop-shadow-md">
-            Where heritage craftsmanship meets sustainable luxury. Each piece tells a story of nature, tradition, and modern living.
+            {t('home.hero.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/products"
               className="bg-[var(--color-wood-light)] text-[var(--color-wood-dark)] px-8 py-4 text-lg tracking-wide hover:bg-[var(--color-cream)] transition-colors"
             >
-              Explore Collection
+              {t('home.hero.explore')}
             </Link>
             <Link
               to="/contact"
               className="border-2 border-[var(--color-cream)] text-[var(--color-cream)] px-8 py-4 text-lg tracking-wide hover:bg-[var(--color-cream)] hover:text-[var(--color-wood-dark)] transition-colors"
             >
-              Chat with us
+              {t('home.hero.chat')}
             </Link>
           </div>
         </div>
@@ -47,9 +50,9 @@ export function Home() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[var(--color-green-light)]/20 mb-6">
                 <Leaf className="text-[var(--color-green-deep)]" size={32} />
               </div>
-              <h3 className="mb-3">Source from Nature</h3>
+              <h3 className="mb-3">{t('home.values.title1')}</h3>
               <p className="opacity-70">
-                Honoring the beauty of Indonesian resources through responsible craftsmanship.
+                {t('home.values.desc1')}
               </p>
             </div>
 
@@ -57,9 +60,9 @@ export function Home() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[var(--color-wood-light)]/20 mb-6">
                 <Users className="text-[var(--color-wood-dark)]" size={32} />
               </div>
-              <h3 className="mb-3">Artisan Crafted</h3>
+              <h3 className="mb-3">{t('home.values.title2')}</h3>
               <p className="opacity-70">
-                Collaborating with local Indonesian artisans, empowering communities and preserving traditional skills.
+                {t('home.values.desc2')}
               </p>
             </div>
 
@@ -67,9 +70,9 @@ export function Home() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[var(--color-wood-light)]/20 mb-6">
                 <Sparkles className="text-[var(--color-wood-medium)]" size={32} />
               </div>
-              <h3 className="mb-3">Bespoke Design</h3>
+              <h3 className="mb-3">{t('home.values.title3')}</h3>
               <p className="opacity-70">
-                Every piece can be customized to your vision, creating furniture that is uniquely yours.
+                {t('home.values.desc3')}
               </p>
             </div>
           </div>
@@ -79,7 +82,7 @@ export function Home() {
       {/* All Collection Section */}
       <section className="py-20 bg-[var(--color-cream-dark)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-12">All Collection</h2>
+          <h2 className="mb-12">{t('home.collection.title')}</h2>
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div className="aspect-square bg-gray-200">
@@ -111,7 +114,7 @@ export function Home() {
               to="/products"
               className="inline-block bg-[var(--color-green-deep)] text-[var(--color-cream)] px-8 py-4 tracking-wide hover:bg-[var(--color-green-medium)] transition-colors"
             >
-              View Full Catalog
+              {t('home.collection.viewAll')}
             </Link>
           </div>
         </div>
@@ -120,15 +123,15 @@ export function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-[var(--color-green-deep)] text-[var(--color-cream)] text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-[var(--color-cream)] text-[#ffffff]">Create your own detail</h2>
+          <h2 className="mb-6 text-[var(--color-cream)] text-[#ffffff]">{t('home.cta.title')}</h2>
           <p className="text-xl mb-8 opacity-90">
-            Let's discuss your vision and craft furniture that perfectly fits your space and style.
+            {t('home.cta.desc')}
           </p>
           <Link
             to="/contact"
             className="inline-block bg-[var(--color-wood-light)] text-[var(--color-wood-dark)] px-8 py-4 text-lg tracking-wide hover:bg-[var(--color-cream)] transition-colors"
           >
-            Start Your Custom Order
+            {t('home.cta.button')}
           </Link>
         </div>
       </section>
