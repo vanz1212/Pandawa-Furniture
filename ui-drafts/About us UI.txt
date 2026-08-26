@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Story - Artisan Earth &amp; Timber</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/shader-web-background/dist/shader-web-background.min.js" type="module"></script>
+<script type="module">
+  import "https://unpkg.com/webgl-shader-element@0.2.1/dist/webgl-shader-element.js";
+</script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#fcebdc",
+                      "primary-container": "#aa632e",
+                      "background": "#fff8f4",
+                      "tertiary": "#715647",
+                      "inverse-primary": "#ffb787",
+                      "secondary-fixed-dim": "#b7cea5",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#e3bfad",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-dim": "#e8d7c9",
+                      "on-primary-fixed": "#311300",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#d2eabf",
+                      "secondary": "#506443",
+                      "on-tertiary-fixed": "#2a170b",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#ffb787",
+                      "on-secondary-fixed-variant": "#394c2d",
+                      "on-primary-container": "#fffbff",
+                      "on-error-container": "#93000a",
+                      "outline": "#867369",
+                      "surface": "#fff8f4",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#566a48",
+                      "on-tertiary-fixed-variant": "#5a4133",
+                      "on-secondary-fixed": "#0e2006",
+                      "on-surface-variant": "#53443a",
+                      "tertiary-container": "#8c6e5f",
+                      "on-tertiary-container": "#fffbff",
+                      "secondary-fixed": "#d2eabf",
+                      "primary": "#8c4b18",
+                      "inverse-surface": "#382f25",
+                      "on-surface": "#221a11",
+                      "surface-bright": "#fff8f4",
+                      "on-primary-fixed-variant": "#723702",
+                      "inverse-on-surface": "#ffeedf",
+                      "primary-fixed": "#ffdcc7",
+                      "surface-container-highest": "#f0e0d1",
+                      "surface-container-high": "#f6e5d7",
+                      "surface-container-low": "#fff1e6",
+                      "tertiary-fixed": "#ffdbc9",
+                      "error-container": "#ffdad6",
+                      "outline-variant": "#d9c2b5",
+                      "surface-variant": "#f0e0d1",
+                      "surface-tint": "#8f4d1a",
+                      "on-background": "#221a11"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "grid-gutter": "24px",
+                      "section-gap-mobile": "64px",
+                      "base": "8px",
+                      "section-gap-desktop": "128px",
+                      "grid-margin": "40px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Syne"
+                      ],
+                      "headline-lg-mobile": [
+                              "Syne"
+                      ],
+                      "label-md": [
+                              "\"Source Sans 3\""
+                      ],
+                      "display-lg": [
+                              "Syne"
+                      ],
+                      "body-lg": [
+                              "\"Source Sans 3\""
+                      ],
+                      "headline-lg": [
+                              "Syne"
+                      ],
+                      "body-md": [
+                              "\"Source Sans 3\""
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #fff8f4; /* Using the background color from theme */
+            color: #221a11; /* on-surface */
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+</head>
+<body class="antialiased font-body-md text-body-md bg-background text-on-background">
+<!-- Top Navigation -->
+<nav class="bg-background dark:bg-background w-full top-0 sticky z-50 flat no shadows">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-10 py-6 w-full">
+<a class="text-headline-md font-headline-md text-primary dark:text-inverse-primary tracking-tight" href="#">Artisan Earth &amp; Timber</a>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors cursor-pointer transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">Collections</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 cursor-pointer transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">Our Story</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors cursor-pointer transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">Craftsmanship</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors cursor-pointer transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">Custom Orders</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors cursor-pointer transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">Journal</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-icon="search">search</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-icon="shopping_bag">shopping_bag</span>
+<button class="bg-[#BE733D] text-white px-6 py-2 rounded font-label-md text-label-md hover:opacity-90 transition-opacity">Inquire</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-grid-margin py-section-gap-desktop grid grid-cols-1 md:grid-cols-12 gap-grid-gutter items-center relative overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_7 class="absolute inset-0 w-full h-full opacity-30 pointer-events-none" -->
+<div class="absolute inset-0 w-full h-full opacity-30 pointer-events-none" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_7" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_7');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+// Artisan Earth & Timber Palette
+// Surface: #fff8f4 -> vec3(0.992, 0.973, 0.957)
+// Terracotta: #be733d -> vec3(0.745, 0.451, 0.239)
+// Deep Olive: #4a5e3d -> vec3(0.290, 0.369, 0.239)
+// Dark Earth: #2d241b -> vec3(0.176, 0.141, 0.106)
+
+float hash(vec2 p) {
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
+}
+
+float noise(vec2 p) {
+    vec2 i = floor(p);
+    vec2 f = fract(p);
+    float a = hash(i);
+    float b = hash(i + vec2(1.0, 0.0));
+    float c = hash(i + vec2(0.0, 1.0));
+    float d = hash(i + vec2(1.0, 1.0));
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(a, b, u.x) + (c - a) * u.y * (1.0 - u.x) + (d - b) * u.x * u.y;
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Create organic wood grain lines
+    float n = noise(uv * vec2(2.0, 20.0) + vec2(u_time * 0.05, 0.0));
+    float grain = sin(uv.y * 100.0 + n * 10.0);
+    grain = smoothstep(0.0, 0.5, grain);
+    
+    // Layered flowing wood textures
+    float flow = noise(uv * 3.0 + u_time * 0.1);
+    float flow2 = noise(uv * 5.0 - u_time * 0.07);
+    
+    vec3 color1 = vec3(0.992, 0.973, 0.957); // Warm Cream (Base)
+    vec3 color2 = vec3(0.745, 0.451, 0.239); // Terracotta (Accent)
+    vec3 color3 = vec3(0.290, 0.369, 0.239); // Deep Olive (Deep notes)
+    
+    vec3 finalColor = mix(color1, color2, flow * 0.3);
+    finalColor = mix(finalColor, color3, flow2 * 0.2);
+    
+    // Add subtle grain darkening
+    finalColor *= (1.0 - grain * 0.04);
+    
+    // Vignette for depth
+    float dist = length(uv - 0.5);
+    finalColor *= smoothstep(1.2, 0.5, dist);
+    
+    gl_FragColor = vec4(finalColor, 1.0);
+}
+`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_7 -->
+<div class="md:col-span-6 md:pr-12 flex flex-col justify-center relative z-10">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-8">Our Story</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">A family legacy rooted in Indonesian craftsmanship, sustainability, and the timeless beauty of teak furniture.</p>
+<div>
+<button class="bg-[#BE733D] text-white px-8 py-3 rounded font-label-md text-label-md hover:opacity-90 transition-opacity uppercase tracking-wider">Discover Our Roots</button>
+</div>
+</div>
+<div class="md:col-span-6 h-[600px] relative rounded overflow-hidden shadow-[0_20px_30px_-15px_rgba(45,36,27,0.04)] relative z-10">
+<img alt="Hero Image" class="object-cover w-full h-full absolute inset-0" data-alt="A wide, sweeping shot of a traditional Indonesian woodworking shop, bathed in warm, golden hour sunlight streaming through large slatted windows. The light highlights dust motes dancing in the air and illuminates a master craftsman gently inspecting a large, weathered slab of reclaimed teak wood. The scene exudes a sense of calm, timeless craftsmanship, and tactile luxury. Deep olive green accents from nearby tools and warm terracotta undertones in the wood grain complete the organic, minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA08TZ1RwkpNiQ32UtPWazzBhGuOX-hjiSCglqp3UGKbPcIQxaCCleiAW1uL3xJ_MBftLFtwVnk5xefr0HADjTu1TalEf239nLs7mBmQPdSg7me8vUNgQDIqznZC1lSCV2Fyc7z7wL71m4a30y4l3kyg0qSlVMHK9oeQBxFpoofOLFpBFoZnI4aCNNO1ZA2ps_qg2xTavdY_ScHQPK6xdX-IsPsWBSjQ5JhfaolCrLgUt27385bjawBOQ"/>
+</div>
+</section>
+<!-- Our Foundation -->
+<section class="max-w-[1440px] mx-auto px-grid-margin py-section-gap-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Our Foundation</h2>
+<div class="w-16 h-1 bg-[#BE733D] mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<!-- Column 1 -->
+<div class="bg-surface-container-lowest p-8 rounded shadow-[0_20px_30px_-15px_rgba(45,36,27,0.04)] text-center group hover:bg-[#FDFBF6] transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-[#BE733D] mb-6 block" data-icon="family_history">family_history</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Family Heritage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">(Bisnis Keluarga)</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Focused on woodworking traditions passed down through generations, supporting local artisans.</p>
+</div>
+<!-- Column 2 -->
+<div class="bg-surface-container-lowest p-8 rounded shadow-[0_20px_30px_-15px_rgba(45,36,27,0.04)] text-center group hover:bg-[#FDFBF6] transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-[#BE733D] mb-6 block" data-icon="forest">forest</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">100% Reclaimed Wood</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Dedicated to sustainability, repurposing materials to protect old-growth rainforests.</p>
+</div>
+<!-- Column 3 -->
+<div class="bg-surface-container-lowest p-8 rounded shadow-[0_20px_30px_-15px_rgba(45,36,27,0.04)] text-center group hover:bg-[#FDFBF6] transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-[#BE733D] mb-6 block" data-icon="architecture">architecture</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">The Spirit of Aged Teak</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Highlighting the unique texture, incredible durability, and rich history of recycled timber.</p>
+</div>
+</div>
+</section>
+<!-- Visual Showcase -->
+<section class="max-w-[1440px] mx-auto px-grid-margin py-section-gap-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter h-auto md:h-[700px]">
+<div class="relative rounded overflow-hidden shadow-[0_20px_30px_-15px_rgba(45,36,27,0.04)] h-[400px] md:h-full">
+<img alt="Artisan at work" class="object-cover w-full h-full absolute inset-0" data-alt="A close-up, highly detailed shot of a skilled artisan's hands meticulously sanding a beautiful, intricate joint on a teak wood chair. The focus is incredibly sharp on the hands and the wood texture, with a soft, creamy background blur (bokeh) suggesting a clean, minimalist workshop. The lighting is soft and diffused, emphasizing the tactile nature of the craftsmanship and the rich, warm tones of the timber." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV-WEK7OZeoH9cjP1d3BQGhNsBR9JK9_CeCfIlXKet5jfH3J0AujTFSMusJrlbK70E7QRNNjiIMdC_SVYEv5yjXZHCxVyhQBhLPkVWhrwF2N6_jONnCQ75KlJoj0m_BB5E2IXYxUSqtNuVDEPzxJb45J9gNu6LpyYjh6XN-IzsSy89pR6HLRqLy6SivG9RDhr7fq3W48i4Epwt8AJ-eJA6jSD9RittQ1aP1V5HQxZM9suLlVDUrmHxPQ"/>
+</div>
+<div class="relative rounded overflow-hidden shadow-[0_20px_30px_-15px_rgba(45,36,27,0.04)] h-[400px] md:h-full md:mt-16">
+<img alt="Wood texture detail" class="object-cover w-full h-full absolute inset-0" data-alt="A stunning macro photograph of reclaimed teak wood grain, showcasing its deep, undulating textures, subtle cracks, and rich color variations ranging from warm terracotta to deep earthy browns. The lighting skims across the surface, casting microscopic shadows that highlight the wood's aged character and organic history. The image feels incredibly tactile and luxurious, fitting a high-end minimalist design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEZZ8nV94X_41t5caxsqv8DgmVXtU_HiIHrq9i8pS2uu0FM-c_B_iaWlpvhFlAa59TPxeb78i4Bm38IH6BQB5lA6r5g8zHjkJIACnmqk6I-BGkhgZCGxMhq8Zo7a_cWbE_o2hFugrlfBPfoHXFPlRSmgY3ktuFZnoXHR5fblt3bUxmlhVxwRhTU3k61p8PcvRtUbh23sw5ND-pO_34Oz4miJNBL6hQOkOrvAG9G-eCf1Ddk6NbHNMUcA"/>
+</div>
+</div>
+</section>
+<!-- Mission Statement -->
+<section class="bg-[#4A5E3D] py-section-gap-desktop px-grid-margin">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-4xl text-[#FDFBF6] mb-8 opacity-50 block" data-icon="format_quote">format_quote</span>
+<p class="font-headline-lg text-headline-lg text-[#FDFBF6] mb-8 leading-relaxed">
+                    Our mission is to bridge the gap between ancient Indonesian woodworking heritage and modern, conscious living. We craft heirloom pieces not just for today, but for generations, ensuring every cut respects the earth.
+                </p>
+<div class="w-12 h-1 bg-[#BE733D] mx-auto mb-6"></div>
+<p class="font-label-md text-label-md text-[#FDFBF6] uppercase tracking-widest opacity-80">The Artisan Promise</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container w-full flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter max-w-[1440px] mx-auto px-10 py-section-gap-desktop">
+<div class="md:col-span-1">
+<p class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim mb-4">Artisan Earth &amp; Timber</p>
+<p class="text-tertiary dark:text-tertiary-fixed-dim font-body-md text-body-md mt-4">© 2024 Artisan Earth &amp; Timber. Sustainable Indonesian Craftsmanship.</p>
+</div>
+<div class="flex flex-col gap-4 mt-8 md:mt-0">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md" href="#">Shipping &amp; Returns</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md" href="#">Contact Us</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer font-label-md text-label-md" href="#">Sustainability Report</a>
+</div>
+<div class="md:col-span-2 mt-8 md:mt-0 flex justify-end items-start">
+<!-- Optional newsletter or extra links could go here, leaving empty for design balance as per JSON -->
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,143 +1,96 @@
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Link } from 'react-router';
 import contactHeroImg from '../assets/contact-hero.jpeg';
-import {
-  MessageCircle,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
 
 export function Contact() {
   return (
-    <div>
+    <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src={contactHeroImg}
-            alt="Contact Pandawa Furniture"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#fffcf2] drop-shadow-lg">
-          <h1 className="mb-6 text-[#fffcf2] font-[Alata] drop-shadow-xl">
-            Get in Touch
-          </h1>
-          <p className="text-xl text-[#fffcf2]/95 font-medium drop-shadow-md">
-            Let's discuss your custom furniture project. We're
-            here to bring your vision to life.
+      <section className="relative w-full h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full" 
+          style={{ backgroundImage: `url(${contactHeroImg})` }}
+        />
+        <div className="absolute inset-0 bg-brand-dark-earth/40 mix-blend-multiply"></div>
+        <div className="relative z-10 text-center px-grid-margin max-w-4xl mx-auto">
+          <h1 className="font-display-lg text-display-lg text-white mb-6 drop-shadow-md">Get in Touch</h1>
+          <p className="font-body-lg text-body-lg text-brand-cream max-w-2xl mx-auto drop-shadow">
+            Let's discuss your custom furniture project. We're here to bring your vision to life.
           </p>
         </div>
       </section>
 
-      {/* Contact Methods - Prominent */}
-      <section className="py-16 bg-[var(--color-wood-light)] text-[var(--color-wood-dark)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* WhatsApp - Primary */}
-            <div className="bg-white p-8 shadow-lg text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500 mb-4">
-                <MessageCircle
-                  className="text-white"
-                  size={32}
-                />
-              </div>
-              <h3 className="mb-3">
-                WhatsApp for Fast Response
-              </h3>
-              <p className="mb-4 opacity-70">
-                The quickest way to reach us for custom design
-                discussions, questions, or urgent inquiries.
-              </p>
-              <a
-                href="https://wa.me/6285168628421"
-                className="inline-block bg-green-500 text-white px-6 py-3 tracking-wide hover:bg-green-600 transition-colors"
-              >
-                Chat on WhatsApp
-              </a>
-              <p className="mt-3 text-sm opacity-60">
-                +62 851-6862-8421
-              </p>
+      {/* Primary Contact Methods */}
+      <section className="max-w-7xl mx-auto px-grid-margin py-section-gap-desktop relative z-20 -mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
+          {/* WhatsApp Card */}
+          <div className="bg-white rounded-xl p-10 shadow-level1 flex flex-col items-start border border-brand-cocoa-brown/10 transition-transform hover:-translate-y-1 duration-300">
+            <div className="w-16 h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center mb-8">
+              <span className="material-symbols-outlined text-[32px] text-[#25D366]" style={{fontVariationSettings: "'wght' 300"}}>chat</span>
             </div>
+            <h2 className="font-headline-md text-headline-md text-brand-dark-earth mb-4">WhatsApp for Fast Response</h2>
+            <p className="font-body-md text-body-md text-brand-dark-earth/70 mb-10 flex-grow">
+              The quickest way to reach us for custom design discussions, questions, or urgent inquiries.
+            </p>
+            <a href="https://wa.me/6285168628421" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-[#25D366] text-white font-label-md text-label-md h-14 px-10 rounded-full hover:bg-[#20bd5a] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 w-full sm:w-auto shadow-md">
+              Chat on WhatsApp
+            </a>
+          </div>
 
-            {/* Email - Secondary */}
-            <div className="bg-white p-8 shadow-lg text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[var(--color-green-deep)] mb-4">
-                <Mail
-                  className="text-[var(--color-cream)]"
-                  size={32}
-                />
-              </div>
-              <h3 className="mb-3">
-                Email for Official Inquiries
-              </h3>
-              <p className="mb-4 opacity-70">
-                For detailed project proposals, quotes, and
-                formal correspondence.
-              </p>
-              <a
-                href="mailto:yusavitocompanies@gmail.com"
-                className="inline-block bg-[var(--color-green-deep)] text-[var(--color-cream)] px-6 py-3 tracking-wide hover:bg-[var(--color-green-medium)] transition-colors"
-              >
-                Send Email
-              </a>
-              <p className="mt-3 text-sm opacity-60">
-                yusavitocompanies@gmail.com
-              </p>
+          {/* Email Card */}
+          <div className="bg-white rounded-xl p-10 shadow-level1 flex flex-col items-start border border-brand-cocoa-brown/10 transition-transform hover:-translate-y-1 duration-300">
+            <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 flex items-center justify-center mb-8">
+              <span className="material-symbols-outlined text-[32px] text-brand-deep-olive" style={{fontVariationSettings: "'wght' 300"}}>mail</span>
             </div>
+            <h2 className="font-headline-md text-headline-md text-brand-dark-earth mb-4">Email for Official Inquiries</h2>
+            <p className="font-body-md text-body-md text-brand-dark-earth/70 mb-10 flex-grow">
+              For detailed project proposals, quotes, and formal correspondence.
+            </p>
+            <a href="mailto:yusavitocompanies@gmail.com" className="inline-flex items-center justify-center bg-brand-deep-olive text-white font-label-md text-label-md h-14 px-10 rounded-full hover:bg-opacity-90 hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 w-full sm:w-auto shadow-md">
+              Send Email
+            </a>
           </div>
         </div>
       </section>
 
       {/* Additional Info */}
-      <section className="py-20 bg-[var(--color-cream)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-wood-light)]/30 mb-4">
-                <MapPin
-                  className="text-[var(--color-wood-dark)]"
-                  size={24}
-                />
+      <section className="bg-brand-cream/30 py-section-gap-desktop">
+        <div className="max-w-7xl mx-auto px-grid-margin">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter text-center">
+            {/* Location */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 rounded-full bg-white shadow-level1 flex items-center justify-center mb-6 text-brand-terracotta group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'wght' 300"}}>location_on</span>
               </div>
-              <h3 className="mb-2">Location</h3>
-              <p className="opacity-70 text-sm">
-                Kudus, Central Java
-                <br />
-                Indonesia
-              </p>
+              <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-2 font-semibold">Location</h3>
+              <p className="font-body-md text-body-md text-brand-dark-earth/70">Kudus, Central Java<br/>Indonesia</p>
             </div>
-
-            <div>
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-wood-light)]/30 mb-4">
-                <Phone
-                  className="text-[var(--color-wood-dark)]"
-                  size={24}
-                />
+            {/* Phone */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 rounded-full bg-white shadow-level1 flex items-center justify-center mb-6 text-brand-terracotta group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'wght' 300"}}>call</span>
               </div>
-              <h3 className="mb-2">Phone</h3>
-              <p className="opacity-70 text-sm">
-                +62 851-6862-8421
-                <br />
-              </p>
+              <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-2 font-semibold">Phone</h3>
+              <p className="font-body-md text-body-md text-brand-dark-earth/70">+62 851-6862-8421</p>
             </div>
-
-            <div>
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-wood-light)]/30 mb-4">
-                <Mail
-                  className="text-[var(--color-wood-dark)]"
-                  size={24}
-                />
+            {/* Email */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 rounded-full bg-white shadow-level1 flex items-center justify-center mb-6 text-brand-terracotta group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'wght' 300"}}>alternate_email</span>
               </div>
-              <h3 className="mb-2">Email</h3>
-              <p className="opacity-70 text-sm">
-                yusavitocompanies@gmail.com
-                <br />
-              </p>
+              <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-2 font-semibold">Email</h3>
+              <p className="font-body-md text-body-md text-brand-dark-earth/70">yusavitocompanies@gmail.com</p>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Deep Olive Banner */}
+      <section className="bg-brand-deep-olive py-24 px-grid-margin text-center">
+        <h2 className="font-display-lg text-[48px] text-brand-cream mb-6 max-w-3xl mx-auto leading-tight">Ready to craft your legacy?</h2>
+        <p className="font-body-lg text-body-lg text-brand-cream/80 max-w-2xl mx-auto mb-10">Every piece tells a story. Let us help you tell yours with sustainable, handcrafted precision.</p>
+        <Link to="/products" className="inline-flex items-center justify-center bg-brand-terracotta text-white font-label-md text-label-md px-10 h-14 rounded-full hover:bg-[#d6854b] hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 shadow-lg">
+          Start a Project
+        </Link>
       </section>
     </div>
   );

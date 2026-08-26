@@ -1,76 +1,28 @@
 import { Link } from 'react-router';
-import { Instagram, Mail, MessageCircle } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--color-wood-dark)] text-[var(--color-cream)] mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="col-span-1">
-            <div className="text-2xl tracking-wider mb-2">PANDAWA</div>
-            <div className="text-xs uppercase tracking-widest opacity-70 mb-4">Furniture</div>
-            <p className="text-sm opacity-80 leading-relaxed">
-              Timeless elegance from Indonesian recycled teak.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm opacity-80">
-              <li><Link to="/" className="hover:opacity-100 transition-opacity">Home</Link></li>
-              <li><Link to="/about" className="hover:opacity-100 transition-opacity">About Us</Link></li>
-              <li><Link to="/products" className="hover:opacity-100 transition-opacity">Products</Link></li>
-              <li><Link to="/production" className="hover:opacity-100 transition-opacity">Production</Link></li>
-            </ul>
-          </div>
-
-          {/* Sustainability */}
-          <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4">Our Commitment</h4>
-            <ul className="space-y-2 text-sm opacity-80">
-              <li>100% Recycled Teak</li>
-              <li>Sustainable Practices</li>
-              <li>Local Artisan Support</li>
-              <li>Eco-Friendly Finishes</li>
-            </ul>
-          </div>
-
-          {/* Contact & Location */}
-          <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4">Connect & Visit</h4>
-            <div className="space-y-3 mb-6">
-              <a 
-                href="https://wa.me/" 
-                className="flex items-center space-x-2 text-sm opacity-80 hover:opacity-100 transition-opacity"
-              >
-                <MessageCircle size={18} />
-                <span>WhatsApp: [NOMOR TELEPON]</span>
-              </a>
-              <a 
-                href="mailto:info@pandawafurniture.com" 
-                className="flex items-center space-x-2 text-sm opacity-80 hover:opacity-100 transition-opacity"
-              >
-                <Mail size={18} />
-                <span>Email Us</span>
-              </a>
-              <div className="flex space-x-4 pt-2">
-                <a href="#" className="opacity-80 hover:opacity-100 transition-opacity">
-                  <Instagram size={20} />
-                </a>
-              </div>
-            </div>
-            
-            <h4 className="text-sm uppercase tracking-wider mb-2">Location</h4>
-            <p className="text-sm opacity-80 leading-relaxed">
-              [ALAMAT LENGKAP TOKO/WORKSHOP]
-            </p>
-          </div>
+    <footer className="bg-surface-container-high dark:bg-surface-container-lowest w-full pt-section-gap-desktop pb-12">
+      <div className="max-w-7xl mx-auto px-grid-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+        <div className="col-span-1 lg:col-span-2">
+          <h3 className="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-4">Artisan Earth & Timber</h3>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+            © 2024 Artisan Earth & Timber. Sustainable Indonesian Craftsmanship.
+          </p>
         </div>
-
-        <div className="border-t border-[var(--color-wood-medium)] mt-8 pt-8 text-center text-sm opacity-70">
-          <p>2026 Pandawa Furniture. Crafted with care in Indonesia.</p>
+        <div>
+          <h4 className="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold mb-4 uppercase tracking-wider">Legal</h4>
+          <ul className="space-y-3 font-body-md text-body-md">
+            <li><Link className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out" to="#">Privacy Policy</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out" to="#">Terms of Service</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold mb-4 uppercase tracking-wider">Support</h4>
+          <ul className="space-y-3 font-body-md text-body-md">
+            <li><Link className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out" to="#">Shipping & Returns</Link></li>
+            <li><Link className="text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out" to="/contact">Contact Us</Link></li>
+          </ul>
         </div>
       </div>
     </footer>

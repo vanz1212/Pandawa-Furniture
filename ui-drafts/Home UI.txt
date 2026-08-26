@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artisan Earth &amp; Timber</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Syne and Source Sans 3 -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#f0e0d1",
+                        "primary": "#8c4b18",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#394c2d",
+                        "inverse-surface": "#382f25",
+                        "on-primary-fixed": "#311300",
+                        "outline": "#867369",
+                        "secondary": "#506443",
+                        "primary-container": "#aa632e",
+                        "primary-fixed": "#ffdcc7",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d2eabf",
+                        "background": "#fff8f4",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#566a48",
+                        "on-background": "#221a11",
+                        "on-surface": "#221a11",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#8f4d1a",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#f0e0d1",
+                        "on-secondary-fixed": "#0e2006",
+                        "primary-fixed-dim": "#ffb787",
+                        "tertiary-fixed": "#ffdbc9",
+                        "secondary-fixed-dim": "#b7cea5",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#fffbff",
+                        "on-primary-container": "#fffbff",
+                        "on-tertiary-fixed-variant": "#5a4133",
+                        "surface-container-high": "#f6e5d7",
+                        "on-primary-fixed-variant": "#723702",
+                        "inverse-on-surface": "#ffeedf",
+                        "tertiary-container": "#8c6e5f",
+                        "surface": "#fff8f4",
+                        "tertiary-fixed-dim": "#e3bfad",
+                        "surface-container-low": "#fff1e6",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#d9c2b5",
+                        "tertiary": "#715647",
+                        "surface-bright": "#fff8f4",
+                        "inverse-primary": "#ffb787",
+                        "surface-dim": "#e8d7c9",
+                        "on-surface-variant": "#53443a",
+                        "secondary-container": "#d2eabf",
+                        "surface-container": "#fcebdc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2a170b",
+                        
+                        // Adding custom colors requested in prompt as tokens mapped to nearest semantic meaning if possible, or direct hex for fidelity to prompt
+                        "brand-terracotta": "#BE733D",
+                        "brand-deep-olive": "#4A5E3D",
+                        "brand-dark-earth": "#2D241B",
+                        "brand-cocoa-brown": "#483124",
+                        "brand-cream": "#FDFBF6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "grid-gutter": "24px",
+                        "section-gap-desktop": "128px",
+                        "base": "8px",
+                        "grid-margin": "40px",
+                        "section-gap-mobile": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Syne"],
+                        "body-lg": ["\"Source Sans 3\""],
+                        "label-md": ["\"Source Sans 3\""],
+                        "headline-lg-mobile": ["Syne"],
+                        "headline-lg": ["Syne"],
+                        "body-md": ["\"Source Sans 3\""],
+                        "display-lg": ["Syne"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    },
+                    boxShadow: {
+                        'level1': '0 10px 30px -5px rgba(45, 36, 27, 0.04)',
+                        'level2': '0 20px 40px -10px rgba(45, 36, 27, 0.08)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-terracotta selection:text-white">
+<!-- TopNavBar -->
+<nav class="bg-background dark:bg-inverse-surface fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm">
+<div class="max-w-7xl mx-auto px-grid-margin flex justify-between items-center h-20">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">
+                Artisan Earth &amp; Timber
+            </a>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex gap-8 items-center font-body-md text-body-md uppercase tracking-wider">
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">Collections</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">Our Story</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">Craftsmanship</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">Custom Orders</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">Journal</a></li>
+</ul>
+<div class="flex items-center gap-6">
+<button aria-label="Shopping Bag" class="text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity duration-300 ease-in-out flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button aria-label="Person" class="text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity duration-300 ease-in-out flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary dark:text-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- 1. Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="A breathtaking, hyper-realistic architectural photography shot of a high-end modern living room featuring exquisitely crafted teak wood furniture. Sunlight streams through massive floor-to-ceiling windows, highlighting the rich, warm natural grain of the wood against clean, minimalist cream walls. The scene embodies tactile luxury and slow living, with soft, ambient lighting emphasizing organic shapes and structural elegance. The color palette is composed of warm creams, deep earth browns, and subtle olive accents, creating a serene, sophisticated gallery-like atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQW6gpo21ueoPrgbcG7ojilVqrCRd98U0wefqWaWvoL4yQxw6g8l5SQaMi_hwh5AgHI7BQgOlRZzSA6CTLFBTIYek9s0V3u-S4-boWFklxH4ljtXAfO2KedzcTKq9sItTmuiEka-I4i3Ct7nEOnH7TXaG97UxnDxaIoUBhHHDzOgXMBYwxXSHh5mU_wnntUXV3rZvbB5JM8tNk03RKwQ0iPGmUm_2IEAThZAGlex67vU9silAHIBtFOA')"></div>
+</div>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-brand-dark-earth/40 z-10"></div>
+<div class="relative z-20 max-w-4xl mx-auto px-grid-margin text-center text-brand-cream">
+<h1 class="font-display-lg text-display-lg mb-6">Timeless Craft, Naturally Involved</h1>
+<p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto opacity-90">Where heritage craftsmanship meets sustainable luxury. Each piece tells a story of nature, tradition, and modern living.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-brand-terracotta text-white font-label-md text-label-md py-4 px-8 rounded hover:bg-opacity-90 transition-all duration-300 shadow-level1">
+                        Explore Collection
+                    </button>
+<button class="border border-brand-cream text-brand-cream font-label-md text-label-md py-4 px-8 rounded hover:bg-brand-cream/10 transition-all duration-300">
+                        Chat with us
+                    </button>
+</div>
+</div>
+</section>
+<!-- 2. Brand Values Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-brand-cream">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value 1 -->
+<div class="bg-white p-12 rounded-lg shadow-level1 flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300">
+<div class="w-16 h-16 rounded-full bg-brand-deep-olive/10 flex items-center justify-center mb-6 text-brand-deep-olive">
+<span class="material-symbols-outlined text-3xl" data-icon="nest_eco_leaf">nest_eco_leaf</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-brand-dark-earth mb-4">Source from Nature</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Ethically harvested materials ensuring ecological balance and longevity.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-white p-12 rounded-lg shadow-level1 flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300">
+<div class="w-16 h-16 rounded-full bg-brand-cocoa-brown/10 flex items-center justify-center mb-6 text-brand-cocoa-brown">
+<span class="material-symbols-outlined text-3xl" data-icon="group">group</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-brand-dark-earth mb-4">Artisan Crafted</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Hand-shaped by master craftsmen preserving Indonesian heritage.</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-white p-12 rounded-lg shadow-level1 flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300">
+<div class="w-16 h-16 rounded-full bg-brand-terracotta/10 flex items-center justify-center mb-6 text-brand-terracotta">
+<span class="material-symbols-outlined text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-brand-dark-earth mb-4">Bespoke Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored pieces designed to integrate flawlessly into your modern space.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. All Collection Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-high">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-brand-dark-earth">All Collection</h2>
+<a class="hidden md:inline-flex items-center gap-2 font-label-md text-label-md text-brand-cocoa-brown hover:text-brand-terracotta transition-colors group" href="#">
+                        VIEW FULL CATALOG 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Bento Grid / Asymmetric Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<!-- Item 1 (Large, Featured) -->
+<div class="md:col-span-8 md:row-span-2 rounded-lg overflow-hidden relative group cursor-pointer shadow-level1 bg-white">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A close-up macro shot focusing intensely on the intricate, swirling grain of premium reclaimed teak wood. The surface is polished to a soft, matte luster, highlighting deep rich browns and golden honey tones. The lighting is directional and warm, creating deep, subtle shadows within the wood's natural imperfections. This high-resolution texture shot emphasizes tactile luxury, organic beauty, and heritage craftsmanship in a minimalist context." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-dark-earth/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+<div class="absolute bottom-8 left-8 text-brand-cream">
+<h3 class="font-headline-md text-headline-md mb-2">Heritage Dining Table</h3>
+<p class="font-body-md text-body-md">Solid Reclaimed Teak</p>
+</div>
+</div>
+<!-- Item 2 (Tall) -->
+<div class="md:col-span-4 md:row-span-2 rounded-lg overflow-hidden relative group cursor-pointer shadow-level1 bg-white">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated, minimalist vertical photograph of an artisanal wooden lounge chair resting in a stark, sunlit gallery space. The chair features clean, sweeping organic curves crafted from dark walnut wood, paired with textured natural linen upholstery in a warm cream tone. The high-key lighting casts a dramatic, soft shadow on the polished concrete floor, embodying a modern, high-end design aesthetic focused on structural elegance." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHl52K8OgYNtkt439xcTQGjymV5DNOxA_4cPNLOjM4N-TTZ5oMStVdEYttKgucYnE6d1xK35fn2IftA9csLnqjPRVcztxmTOyN9wXmtmfrcOxEtSs9DunTeK5U4oyyOR7eL_TpkBFwaq9b38x_GBxkTl2CsG-R_PcwwMQaA5DohdRtR-v29rcS8mm3hAe-qJgWO3xWbmt46A8YIUusyjDFKbBsbkXfs4VJalMuWJQbwCFX5HXPybbJCw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-dark-earth/70 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+<div class="absolute bottom-8 left-8 text-brand-cream">
+<h3 class="font-headline-md text-headline-md mb-2">Lounge Series</h3>
+<p class="font-body-md text-body-md">Ergonomic Comfort</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="md:col-span-4 rounded-lg overflow-hidden relative group cursor-pointer shadow-level1 bg-white">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A beautifully styled vignette showing a minimalist wooden credenza made of light ash wood. On top sits a simple ceramic vase holding a single dried branch. The background is a stark, textured cream wall. The lighting is soft and ambient, creating a serene, slow-living atmosphere that highlights the precise joinery and flawless finish of the furniture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdYUfhQA_B14kFpNWW0-eT7xIFFssAUZtGACQrjIaKcilCUei5OYRFS6yX97iM4djnncwa9uNMv-UL7OCrkAUESwzKaD6Kd3gaJvBYal5vRGR05u2Tv8Q8XK8jMb9kId8uAnOeKl4_vzIzuOLFHExCzfmo_3E075DccXBO_5Zus8wkUjpylMEluOQSnaXKc40oHIntW66LzLY0OPrIpSttPYd06b_i22tIpPsHKZCczfWF9ZkZKMzR6w')"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+</div>
+<!-- Item 4 -->
+<div class="md:col-span-4 rounded-lg overflow-hidden relative group cursor-pointer shadow-level1 bg-white">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A top-down architectural detail shot of a perfectly round wooden coffee table with a deeply carved sunburst pattern in the center. The wood is a rich, warm mahogany. The surrounding floor is a soft, seamless micro-cement in a light beige tone. The lighting is even and flat, emphasizing the geometric precision and artisanal craftsmanship of the table's surface." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKxRORyTe_o3kx0H7z8Q_Xe1gAfZ97mhvusyBcDgJM7ucVQNyJgHtaSaflUxtfKXRluKbRFlXCBazSY5kksiaDyggVXxGphXDTt7GMco1xLRBEgi7_Iz0qieg3eTBoixoVHBbyGGomnX5gSrS7K33-tnzGBi02gWtA0xcDMoXx7zTkC_JkNGEKBQHBYmMTHSXf-qdNtIWUvB9D3MHKu-Lti0PcNA-z6LFQvrgVsHd5voahelO2h0VqTg')"></div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+</div>
+<!-- Item 5 & 6 (Combined visually for layout variety) -->
+<div class="md:col-span-4 rounded-lg overflow-hidden relative flex flex-col justify-center items-center bg-brand-cocoa-brown text-brand-cream p-8 text-center group cursor-pointer hover:bg-brand-dark-earth transition-colors duration-500 shadow-level1">
+<span class="material-symbols-outlined text-4xl mb-4 opacity-70 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+<h3 class="font-headline-md text-headline-md mb-2">View Full Catalog</h3>
+<p class="font-body-md text-body-md opacity-80">Explore over 50 unique pieces</p>
+</div>
+</div>
+<div class="mt-8 text-center md:hidden">
+<button class="bg-brand-cocoa-brown text-white font-label-md text-label-md py-4 px-8 rounded w-full">
+                        View Full Catalog
+                    </button>
+</div>
+</div>
+</section>
+<!-- 4. CTA Banner Section -->
+<section class="bg-brand-deep-olive py-24 relative overflow-hidden">
+<!-- Decorative structural elements -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 translate-x-1/4 pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-grid-margin text-center relative z-10 text-brand-cream">
+<h2 class="font-display-lg text-display-lg mb-6">Create your own detail</h2>
+<p class="font-body-lg text-body-lg mb-10 opacity-90 max-w-2xl mx-auto">
+                    Let's discuss your vision and craft furniture that perfectly fits your space and style. Our artisans are ready to bring your ideas to life.
+                </p>
+<button class="bg-brand-terracotta text-white font-label-md text-label-md py-4 px-10 rounded hover:bg-opacity-90 transition-all duration-300 shadow-level2">
+                    Start Your Custom Order
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high dark:bg-surface-container-lowest w-full pt-section-gap-desktop pb-12">
+<div class="max-w-7xl mx-auto px-grid-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<div class="col-span-1 lg:col-span-2">
+<h3 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-4">Artisan Earth &amp; Timber</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+                    © 2024 Artisan Earth &amp; Timber. Sustainable Indonesian Craftsmanship.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold mb-4 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold mb-4 uppercase tracking-wider">Support</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
