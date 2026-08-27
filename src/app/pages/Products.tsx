@@ -2,11 +2,9 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AlertCircle } from 'lucide-react';
 
 // Images
 import productsHeroImg from '../assets/products-hero.jpeg';
-import diningTableImg from '../assets/747c9eacd41d3030f053560c4665dad6782f4c12.png';
 import dressoirImg from '../assets/15f0a36d33a7c06acb99f1b5cf23860e31c9e229.png';
 import waterSinkImg from '../assets/e5cd0fd4255a0e604c6ba1ec1d5873e3d9ebcf66.png';
 import chairSeatingImg from '../assets/370b981283bbd2c5a2a73ec4db7335096541114f.png';
@@ -16,40 +14,33 @@ import proofCabinetImg from '../assets/fc5964b3113fde8a49149cd92f85ea4450691c43.
 import proofTvStandImg from '../assets/bb679ca50af152a8f0faa607e561f4d8254d5707.png';
 import proofStoneSinkImg from '../assets/9d2c15d930a9c6e851693b503a7ba6f8be3a7dab.png';
 import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
-import proofRawSinksImg from '../assets/fbd705d2638d0d483e883fa699ac22047d0b7b86.png';
 import proofModernSinkImg from '../assets/b3f18b3721af140365d532d02c4d8bea34c7615a.png';
 
 export function Products() {
   const { t } = useTranslation();
-  const [activeCollectionTab, setActiveCollectionTab] = useState('ALL');
-  
-  const collectionTabs = ['ALL', 'CABINET', 'DRESSOIR', 'CHAIR', 'WATER SINK STONE'];
+  const [visibleItems, setVisibleItems] = useState(6);
 
   const collectionImages = [
     // CABINET
-    { image: proofCabinetImg, alt: 'Teak wood cabinet ready for shipment', category: 'CABINET' },
-    { image: proofWardrobeImg, alt: 'Teak wood wardrobe with storage drawers', category: 'CABINET' },
-    { image: bedroomFurnitureImg, alt: 'Bedroom Wardrobe', category: 'CABINET' },
+    { image: proofCabinetImg, alt: 'Teak wood cabinet ready for shipment', title: 'Teak Wood Cabinet' },
+    { image: proofWardrobeImg, alt: 'Teak wood wardrobe with storage drawers', title: 'Teak Wood Wardrobe' },
+    { image: bedroomFurnitureImg, alt: 'Bedroom Wardrobe', title: 'Bedroom Wardrobe' },
     
     // DRESSOIR
-    { image: dressoirImg, alt: 'Vintage Dressoir', category: 'DRESSOIR' },
-    { image: proofTvStandImg, alt: 'Custom TV stand with storage drawers', category: 'DRESSOIR' },
-    { image: coffeeTableImg, alt: 'Coffee Table Minimalist', category: 'DRESSOIR' },
+    { image: dressoirImg, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+    { image: proofTvStandImg, alt: 'Custom TV stand with storage drawers', title: 'Custom TV Stand' },
+    { image: coffeeTableImg, alt: 'Coffee Table Minimalist', title: 'Minimalist Coffee Table' },
     
     // CHAIR
-    { image: chairSeatingImg, alt: 'Lounge Teak Chair', category: 'CHAIR' },
-    { image: chairSeatingImg, alt: 'Lounge Teak Chair Angle 2', category: 'CHAIR' },
-    { image: chairSeatingImg, alt: 'Lounge Teak Chair Details', category: 'CHAIR' },
+    { image: chairSeatingImg, alt: 'Lounge Teak Chair', title: 'Lounge Teak Chair' },
+    { image: chairSeatingImg, alt: 'Lounge Teak Chair Angle 2', title: 'Lounge Teak Chair' },
+    { image: chairSeatingImg, alt: 'Lounge Teak Chair Details', title: 'Lounge Teak Chair' },
     
     // WATER SINK STONE
-    { image: waterSinkImg, alt: 'Water Sink Stone', category: 'WATER SINK STONE' },
-    { image: proofStoneSinkImg, alt: 'Hand-carved stone sink basin', category: 'WATER SINK STONE' },
-    { image: proofModernSinkImg, alt: 'Modern stone sink with teak vanity', category: 'WATER SINK STONE' },
+    { image: waterSinkImg, alt: 'Water Sink Stone', title: 'Water Sink Stone' },
+    { image: proofStoneSinkImg, alt: 'Hand-carved stone sink basin', title: 'Hand-carved Stone Sink' },
+    { image: proofModernSinkImg, alt: 'Modern stone sink with teak vanity', title: 'Modern Stone Sink' },
   ];
-
-  const filteredCollection = activeCollectionTab === 'ALL'
-    ? collectionImages
-    : collectionImages.filter(img => img.category === activeCollectionTab);
 
   return (
     <div className="pt-20">
@@ -82,40 +73,38 @@ export function Products() {
       {/* Sample Collection Section */}
       <section className="w-full py-section-gap-desktop bg-surface">
         <div className="max-w-7xl mx-auto px-grid-margin">
-          <div className="text-center mb-16">
-            <h2 className="font-headline-lg text-headline-lg text-brand-dark-earth mb-4">{t('home.collection.title')}</h2>
+          <div className="flex flex-col items-center mb-16">
+            <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-brand-dark-earth uppercase tracking-wider">{t('home.collection.title')}</h2>
           </div>
           
-          {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {collectionTabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveCollectionTab(tab)}
-                className={`px-6 h-10 rounded-full font-label-md text-label-md transition-all duration-300 ${
-                  activeCollectionTab === tab
-                    ? 'bg-brand-deep-olive text-white shadow-md'
-                    : 'bg-brand-deep-olive/10 text-brand-dark-earth hover:bg-brand-deep-olive hover:text-white'
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-grid-gutter">
-            {filteredCollection.map((item, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-level1 overflow-hidden group">
-                <div className="aspect-[4/5] relative overflow-hidden bg-brand-cream/50">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
+            {collectionImages.slice(0, visibleItems).map((item, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="w-full aspect-[4/5] mb-6 overflow-hidden bg-brand-cream/30">
                   <ImageWithFallback
                     src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
+                <div className="text-center text-brand-dark-earth">
+                  <h3 className="font-headline-md text-headline-md">{item.title}</h3>
+                </div>
               </div>
             ))}
           </div>
+
+          {/* Load More Button */}
+          {visibleItems < collectionImages.length && (
+            <div className="mt-16 text-center">
+              <button 
+                onClick={() => setVisibleItems(prev => prev + 3)}
+                className="inline-flex items-center justify-center border border-brand-dark-earth text-brand-dark-earth font-label-md text-label-md h-12 px-8 hover:bg-brand-dark-earth hover:text-white transition-colors duration-300 uppercase tracking-wider"
+              >
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

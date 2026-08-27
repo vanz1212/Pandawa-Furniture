@@ -47,7 +47,7 @@ export function Production() {
           {/* Step 1 */}
           <div className="bg-white rounded-xl p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
             <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 text-brand-deep-olive flex items-center justify-center mb-6 shadow-sm">
-              <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>energy_savings_leaf</span>
+              <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>energy_savings_leaf</span>
             </div>
             <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 01</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s1.title')}</h3>
@@ -57,7 +57,7 @@ export function Production() {
           {/* Step 2 */}
           <div className="bg-white rounded-xl p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
             <div className="w-16 h-16 rounded-full bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center mb-6 shadow-sm">
-              <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>handyman</span>
+              <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>handyman</span>
             </div>
             <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 02</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s2.title')}</h3>
@@ -67,7 +67,7 @@ export function Production() {
           {/* Step 3 */}
           <div className="bg-white rounded-xl p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
             <div className="w-16 h-16 rounded-full bg-brand-cocoa-brown text-white flex items-center justify-center mb-6 shadow-sm">
-              <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>shield</span>
+              <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>shield</span>
             </div>
             <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 03</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s3.title')}</h3>
@@ -77,7 +77,7 @@ export function Production() {
           {/* Step 4 */}
           <div className="bg-white rounded-xl p-8 shadow-level1 relative z-10 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
             <div className="w-16 h-16 rounded-full bg-brand-deep-olive/10 text-brand-deep-olive flex items-center justify-center mb-6 shadow-sm">
-              <span className="material-symbols-outlined text-[32px]" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>local_shipping</span>
+              <span className="material-symbols-outlined text-[32px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>local_shipping</span>
             </div>
             <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 04</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s4.title')}</h3>
@@ -96,19 +96,19 @@ export function Production() {
             </p>
             <ul className="space-y-6">
               <li className="flex items-start">
-                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>check_circle</span>
+                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
                 <div>
                   <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point1')}</h4>
                 </div>
               </li>
               <li className="flex items-start">
-                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>check_circle</span>
+                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
                 <div>
                   <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point2')}</h4>
                 </div>
               </li>
               <li className="flex items-start">
-                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{fontVariationSettings: "'FILL' 1, 'wght' 300"}}>check_circle</span>
+                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
                 <div>
                   <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point3')}</h4>
                 </div>
@@ -154,7 +154,7 @@ export function Production() {
               {t('production.shipping.desc')}
             </p>
           </div>
-          
+
           <div className="bg-white rounded-2xl p-6 md:p-10 shadow-level2">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
               <div className="rounded-xl overflow-hidden aspect-square group">

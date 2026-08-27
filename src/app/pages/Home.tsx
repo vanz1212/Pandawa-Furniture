@@ -1,9 +1,20 @@
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import heroBg from '../assets/2874e70677e9347f1c498bc483444526782683b2.png';
 
 export function Home() {
   const { t } = useTranslation();
+  const [visibleItems, setVisibleItems] = useState(3);
+
+  const collections = [
+    { title: "Flores Collection", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg" },
+    { title: "Mandeling Collection", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHl52K8OgYNtkt439xcTQGjymV5DNOxA_4cPNLOjM4N-TTZ5oMStVdEYttKgucYnE6d1xK35fn2IftA9csLnqjPRVcztxmTOyN9wXmtmfrcOxEtSs9DunTeK5U4oyyOR7eL_TpkBFwaq9b38x_GBxkTl2CsG-R_PcwwMQaA5DohdRtR-v29rcS8mm3hAe-qJgWO3xWbmt46A8YIUusyjDFKbBsbkXfs4VJalMuWJQbwCFX5HXPybbJCw" },
+    { title: "Aceh Indoor Collection", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAdYUfhQA_B14kFpNWW0-eT7xIFFssAUZtGACQrjIaKcilCUei5OYRFS6yX97iM4djnncwa9uNMv-UL7OCrkAUESwzKaD6Kd3gaJvBYal5vRGR05u2Tv8Q8XK8jMb9kId8uAnOeKl4_vzIzuOLFHExCzfmo_3E075DccXBO_5Zus8wkUjpylMEluOQSnaXKc40oHIntW66LzLY0OPrIpSttPYd06b_i22tIpPsHKZCczfWF9ZkZKMzR6w" },
+    { title: "Bali Outdoor Collection", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKxRORyTe_o3kx0H7z8Q_Xe1gAfZ97mhvusyBcDgJM7ucVQNyJgHtaSaflUxtfKXRluKbRFlXCBazSY5kksiaDyggVXxGphXDTt7GMco1xLRBEgi7_Iz0qieg3eTBoixoVHBbyGGomnX5gSrS7K33-tnzGBi02gWtA0xcDMoXx7zTkC_JkNGEKBQHBYmMTHSXf-qdNtIWUvB9D3MHKu-Lti0PcNA-z6LFQvrgVsHd5voahelO2h0VqTg" },
+    { title: "Jepara Classic Collection", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg" },
+    { title: "Sumatra Lounge Collection", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHl52K8OgYNtkt439xcTQGjymV5DNOxA_4cPNLOjM4N-TTZ5oMStVdEYttKgucYnE6d1xK35fn2IftA9csLnqjPRVcztxmTOyN9wXmtmfrcOxEtSs9DunTeK5U4oyyOR7eL_TpkBFwaq9b38x_GBxkTl2CsG-R_PcwwMQaA5DohdRtR-v29rcS8mm3hAe-qJgWO3xWbmt46A8YIUusyjDFKbBsbkXfs4VJalMuWJQbwCFX5HXPybbJCw" },
+  ];
 
   return (
     <div className="pt-20">
@@ -65,63 +76,37 @@ export function Home() {
       </section>
 
       {/* 3. All Collection Section */}
-      <section className="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-high">
+      <section className="py-section-gap-mobile md:py-section-gap-desktop bg-surface">
         <div className="max-w-7xl mx-auto px-grid-margin">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-            <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-brand-dark-earth">{t('home.collection.title')}</h2>
-            <Link to="/products" className="hidden md:inline-flex items-center gap-2 font-label-md text-label-md text-brand-cocoa-brown hover:text-brand-terracotta transition-colors group">
-              {t('home.collection.viewAll')} 
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </Link>
+          <div className="flex flex-col items-center mb-16">
+            <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-brand-dark-earth uppercase tracking-wider">{t('home.collection.title')}</h2>
           </div>
           
-          {/* Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
-            {/* Item 1 */}
-            <div className="md:col-span-8 md:row-span-2 rounded-lg overflow-hidden relative group cursor-pointer shadow-level1 bg-white">
-              <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtN1RhIbtMCdwlejV1YrJA7ufvcR0haAxAo1v4Mca6lsIcLGHZAE5LC-SZSKjwSQZ-2KO2tKxQ0DzNv7hKi-o_ul-QZIlquzFwxZoH1_pHNVOSYlgrvt9Pswm8ro6-_uVl2NMW9p4Tz0EEhWymihO27J7g5CGDngeQ2HnpwT_R-WhXe6R08SMrdeRK6ChRm7rnQk4_rhtjsOHvOT6cBwQXA8N0zEjVwzfNWL_YZdTsNLVXkt_jtXb-Mg')"}}></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-earth/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute bottom-8 left-8 text-brand-cream">
-                <h3 className="font-headline-md text-headline-md mb-2 pb-1">Heritage Dining Table</h3>
-                <p className="font-body-md text-body-md">Solid Reclaimed Teak</p>
+          {/* Collection Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
+            {collections.slice(0, visibleItems).map((item, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="w-full aspect-[4/3] mb-6 overflow-hidden bg-brand-cream/30">
+                  <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{backgroundImage: `url('${item.image}')`}}></div>
+                </div>
+                <div className="text-center text-brand-dark-earth">
+                  <h3 className="font-headline-md text-headline-md">{item.title}</h3>
+                </div>
               </div>
-            </div>
-            
-            {/* Item 2 */}
-            <div className="md:col-span-4 md:row-span-2 rounded-lg overflow-hidden relative group cursor-pointer shadow-level1 bg-white">
-              <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHl52K8OgYNtkt439xcTQGjymV5DNOxA_4cPNLOjM4N-TTZ5oMStVdEYttKgucYnE6d1xK35fn2IftA9csLnqjPRVcztxmTOyN9wXmtmfrcOxEtSs9DunTeK5U4oyyOR7eL_TpkBFwaq9b38x_GBxkTl2CsG-R_PcwwMQaA5DohdRtR-v29rcS8mm3hAe-qJgWO3xWbmt46A8YIUusyjDFKbBsbkXfs4VJalMuWJQbwCFX5HXPybbJCw')"}}></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-earth/70 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute bottom-8 left-8 text-brand-cream">
-                <h3 className="font-headline-md text-headline-md mb-2 pb-1">Lounge Series</h3>
-                <p className="font-body-md text-body-md">Ergonomic Comfort</p>
-              </div>
-            </div>
-            
-            {/* Item 3 */}
-            <div className="md:col-span-4 rounded-lg overflow-hidden relative group cursor-pointer shadow-level1 bg-white">
-              <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdYUfhQA_B14kFpNWW0-eT7xIFFssAUZtGACQrjIaKcilCUei5OYRFS6yX97iM4djnncwa9uNMv-UL7OCrkAUESwzKaD6Kd3gaJvBYal5vRGR05u2Tv8Q8XK8jMb9kId8uAnOeKl4_vzIzuOLFHExCzfmo_3E075DccXBO_5Zus8wkUjpylMEluOQSnaXKc40oHIntW66LzLY0OPrIpSttPYd06b_i22tIpPsHKZCczfWF9ZkZKMzR6w')"}}></div>
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-            </div>
-            
-            {/* Item 4 */}
-            <div className="md:col-span-4 rounded-lg overflow-hidden relative group cursor-pointer shadow-level1 bg-white">
-              <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKxRORyTe_o3kx0H7z8Q_Xe1gAfZ97mhvusyBcDgJM7ucVQNyJgHtaSaflUxtfKXRluKbRFlXCBazSY5kksiaDyggVXxGphXDTt7GMco1xLRBEgi7_Iz0qieg3eTBoixoVHBbyGGomnX5gSrS7K33-tnzGBi02gWtA0xcDMoXx7zTkC_JkNGEKBQHBYmMTHSXf-qdNtIWUvB9D3MHKu-Lti0PcNA-z6LFQvrgVsHd5voahelO2h0VqTg')"}}></div>
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-            </div>
-            
-            {/* Item 5 & 6 (Combined) */}
-            <Link to="/products" className="md:col-span-4 rounded-lg overflow-hidden relative flex flex-col justify-center items-center bg-brand-cocoa-brown text-brand-cream p-8 text-center group cursor-pointer hover:bg-brand-dark-earth transition-colors duration-500 shadow-level1">
-              <span className="material-symbols-outlined text-4xl mb-4 opacity-70 group-hover:opacity-100 transition-opacity">arrow_forward</span>
-              <h3 className="font-headline-md text-headline-md mb-2 pb-1">{t('home.collection.viewAll')}</h3>
-              <p className="font-body-md text-body-md opacity-80">Explore over 50 unique pieces</p>
-            </Link>
+            ))}
           </div>
           
-          <div className="mt-8 text-center md:hidden">
-            <Link to="/products" className="inline-flex items-center justify-center bg-brand-cocoa-brown text-white font-label-md text-label-md h-14 px-8 rounded-full w-full hover:bg-brand-dark-earth hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300">
-              {t('home.collection.viewAll')}
-            </Link>
-          </div>
+          {/* Load More Button */}
+          {visibleItems < collections.length && (
+            <div className="mt-16 text-center">
+              <button 
+                onClick={() => setVisibleItems(prev => prev + 3)}
+                className="inline-flex items-center justify-center border border-brand-dark-earth text-brand-dark-earth font-label-md text-label-md h-12 px-8 hover:bg-brand-dark-earth hover:text-white transition-colors duration-300 uppercase tracking-wider"
+              >
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
