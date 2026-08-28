@@ -6,15 +6,28 @@ import { useTranslation } from 'react-i18next';
 // Images
 import productsHeroImg from '../assets/products-hero.jpeg';
 import dressoirImg from '../assets/15f0a36d33a7c06acb99f1b5cf23860e31c9e229.png';
-import waterSinkImg from '../assets/e5cd0fd4255a0e604c6ba1ec1d5873e3d9ebcf66.png';
-import chairSeatingImg from '../assets/370b981283bbd2c5a2a73ec4db7335096541114f.png';
 import coffeeTableImg from '../assets/ff89027649427a59d1b62a1e882d28aed26cc775.png';
 import bedroomFurnitureImg from '../assets/f3c9df50243d7f9e3d03f042f3f6626ec85bbf74.png';
 import proofCabinetImg from '../assets/fc5964b3113fde8a49149cd92f85ea4450691c43.png';
 import proofTvStandImg from '../assets/bb679ca50af152a8f0faa607e561f4d8254d5707.png';
-import proofStoneSinkImg from '../assets/9d2c15d930a9c6e851693b503a7ba6f8be3a7dab.png';
 import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
-import proofModernSinkImg from '../assets/b3f18b3721af140365d532d02c4d8bea34c7615a.png';
+
+// Chair Images
+import chairImg1 from '../../assets/chair/02702213-650x650.jpg';
+import chairImg2 from '../../assets/chair/02702930-650x650.jpg';
+import chairImg3 from '../../assets/chair/1380686619-650x650.jpg';
+import chairImg4 from '../../assets/chair/1532591640-650x650.jpg';
+import chairImg5 from '../../assets/chair/1565899437-650x650.jpg';
+import chairImg6 from '../../assets/chair/KL-J-010-A1-650x650.jpg';
+import chairImg7 from '../../assets/chair/x_0y_01458114406-650x650.jpg';
+
+// Water Sink Images
+import waterSinkImg1 from '../../assets/water sink/6a3d62e1-b9c4-496c-9132-a025c0627efb.jpg';
+import waterSinkImg2 from '../../assets/water sink/8701061a-9a20-4757-a9df-0bb2bacd549d.jpg';
+import waterSinkImg3 from '../../assets/water sink/8d9c2597-6d3d-472b-a82d-2cba04191bcf.jpg';
+import waterSinkImg4 from '../../assets/water sink/a5d52f18-938e-4786-9764-f8f84bfb85bb.jpg';
+import waterSinkImg5 from '../../assets/water sink/abbc1bbd-c466-4ce6-8d15-6de8fedae365.jpg';
+import waterSinkImg6 from '../../assets/water sink/f074e6f2-a389-4b73-8f0e-dfe8252a78ae.jpg';
 
 export function Products() {
   const { t } = useTranslation();
@@ -26,20 +39,27 @@ export function Products() {
     { image: proofWardrobeImg, alt: 'Teak wood wardrobe with storage drawers', title: 'Teak Wood Wardrobe' },
     { image: bedroomFurnitureImg, alt: 'Bedroom Wardrobe', title: 'Bedroom Wardrobe' },
     
+    // CHAIR
+    { image: chairImg1, alt: 'Lounge Teak Chair', title: 'Lounge Teak Chair' },
+    { image: chairImg2, alt: 'Lounge Teak Chair Angle 2', title: 'Lounge Teak Chair' },
+    { image: chairImg3, alt: 'Lounge Teak Chair Details', title: 'Lounge Teak Chair' },
+    { image: chairImg4, alt: 'Chair Variant 4', title: 'Lounge Teak Chair' },
+    { image: chairImg5, alt: 'Chair Variant 5', title: 'Lounge Teak Chair' },
+    { image: chairImg6, alt: 'Chair Variant 6', title: 'Lounge Teak Chair' },
+    { image: chairImg7, alt: 'Chair Variant 7', title: 'Lounge Teak Chair' },
+    
     // DRESSOIR
     { image: dressoirImg, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
     { image: proofTvStandImg, alt: 'Custom TV stand with storage drawers', title: 'Custom TV Stand' },
     { image: coffeeTableImg, alt: 'Coffee Table Minimalist', title: 'Minimalist Coffee Table' },
     
-    // CHAIR
-    { image: chairSeatingImg, alt: 'Lounge Teak Chair', title: 'Lounge Teak Chair' },
-    { image: chairSeatingImg, alt: 'Lounge Teak Chair Angle 2', title: 'Lounge Teak Chair' },
-    { image: chairSeatingImg, alt: 'Lounge Teak Chair Details', title: 'Lounge Teak Chair' },
-    
     // WATER SINK STONE
-    { image: waterSinkImg, alt: 'Water Sink Stone', title: 'Water Sink Stone' },
-    { image: proofStoneSinkImg, alt: 'Hand-carved stone sink basin', title: 'Hand-carved Stone Sink' },
-    { image: proofModernSinkImg, alt: 'Modern stone sink with teak vanity', title: 'Modern Stone Sink' },
+    { image: waterSinkImg1, alt: 'Water Sink Stone', title: 'Water Sink Stone' },
+    { image: waterSinkImg2, alt: 'Hand-carved stone sink basin', title: 'Hand-carved Stone Sink' },
+    { image: waterSinkImg3, alt: 'Modern stone sink with teak vanity', title: 'Modern Stone Sink' },
+    { image: waterSinkImg4, alt: 'Water Sink Variant 4', title: 'Water Sink Stone' },
+    { image: waterSinkImg5, alt: 'Water Sink Variant 5', title: 'Water Sink Stone' },
+    { image: waterSinkImg6, alt: 'Water Sink Variant 6', title: 'Water Sink Stone' },
   ];
 
   return (
@@ -80,15 +100,12 @@ export function Products() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
             {collectionImages.slice(0, visibleItems).map((item, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="w-full aspect-[4/5] mb-6 overflow-hidden bg-brand-cream/30">
+                <div className="w-full aspect-[4/5] overflow-hidden bg-brand-cream/30">
                   <ImageWithFallback
                     src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                </div>
-                <div className="text-center text-brand-dark-earth">
-                  <h3 className="font-headline-md text-headline-md">{item.title}</h3>
                 </div>
               </div>
             ))}
