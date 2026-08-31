@@ -12,6 +12,20 @@ import proofCabinetImg from '../assets/fc5964b3113fde8a49149cd92f85ea4450691c43.
 import proofTvStandImg from '../assets/bb679ca50af152a8f0faa607e561f4d8254d5707.png';
 import proofWardrobeImg from '../assets/93fec46fe2c182559cb71aafc651703bd56b2630.png';
 
+// New Cabinet Images
+import cab1 from '../../assets/cabinet/1380088840-650x650.jpg';
+import cab2 from '../../assets/cabinet/02703170-1-650x650.jpg';
+import cab3 from '../../assets/cabinet/02702809-1-650x650.jpg';
+import cab4 from '../../assets/cabinet/02702153-650x650.jpg';
+import cab5 from '../../assets/cabinet/02702143-1.jpg';
+
+// New Dressoir Images
+import dres1 from '../../assets/dressoir/1380088840-650x650.jpg';
+import dres2 from '../../assets/dressoir/02703170-1-650x650.jpg';
+import dres3 from '../../assets/dressoir/02702809-1-650x650.jpg';
+import dres4 from '../../assets/dressoir/02702153-650x650.jpg';
+import dres5 from '../../assets/dressoir/02702143-1.jpg';
+
 // Chair Images
 import chairImg1 from '../../assets/chair/02702213-650x650.jpg';
 import chairImg2 from '../../assets/chair/02702930-650x650.jpg';
@@ -38,6 +52,11 @@ export function Products() {
     { image: proofCabinetImg, alt: 'Teak wood cabinet ready for shipment', title: 'Teak Wood Cabinet' },
     { image: proofWardrobeImg, alt: 'Teak wood wardrobe with storage drawers', title: 'Teak Wood Wardrobe' },
     { image: bedroomFurnitureImg, alt: 'Bedroom Wardrobe', title: 'Bedroom Wardrobe' },
+    { image: cab1, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
+    { image: cab2, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
+    { image: cab3, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
+    { image: cab4, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
+    { image: cab5, alt: 'Teak Wood Cabinet', title: 'Teak Wood Cabinet' },
     
     // CHAIR
     { image: chairImg1, alt: 'Lounge Teak Chair', title: 'Lounge Teak Chair' },
@@ -52,6 +71,11 @@ export function Products() {
     { image: dressoirImg, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
     { image: proofTvStandImg, alt: 'Custom TV stand with storage drawers', title: 'Custom TV Stand' },
     { image: coffeeTableImg, alt: 'Coffee Table Minimalist', title: 'Minimalist Coffee Table' },
+    { image: dres1, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+    { image: dres2, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+    { image: dres3, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+    { image: dres4, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
+    { image: dres5, alt: 'Vintage Dressoir', title: 'Vintage Dressoir' },
     
     // WATER SINK STONE
     { image: waterSinkImg1, alt: 'Water Sink Stone', title: 'Water Sink Stone' },
