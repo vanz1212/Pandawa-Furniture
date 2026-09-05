@@ -24,7 +24,7 @@ export function Production() {
         </div>
         <div className="relative z-20 text-center px-grid-margin max-w-4xl mx-auto flex flex-col items-center">
           <h1 className="font-display-lg text-display-lg text-white mb-6 drop-shadow-md">{t('production.hero.title')}</h1>
-          <p className="font-body-lg text-body-lg text-brand-cream/90 max-w-2xl text-center drop-shadow-md">
+          <p className="font-body-lg text-xl md:text-2xl text-brand-cream/90 max-w-2xl text-center drop-shadow-md">
             {t('production.hero.desc')}
           </p>
         </div>
@@ -34,7 +34,7 @@ export function Production() {
       <section className="py-section-gap-desktop px-grid-margin max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-headline-lg text-[32px] md:text-headline-lg text-brand-dark-earth mb-4">{t('production.process.title')}</h2>
-          <p className="font-body-md text-body-md text-brand-dark-earth/70">
+          <p className="font-body-md text-lg text-brand-dark-earth/70">
             {t('production.process.desc')}
           </p>
         </div>
@@ -51,7 +51,7 @@ export function Production() {
             </div>
             <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 01</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s1.title')}</h3>
-            <p className="font-body-md text-sm text-brand-dark-earth/70">{t('production.process.steps.s1.desc')}</p>
+            <p className="font-body-md text-base text-brand-dark-earth/70">{t('production.process.steps.s1.desc')}</p>
           </div>
 
           {/* Step 2 */}
@@ -61,7 +61,7 @@ export function Production() {
             </div>
             <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 02</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s2.title')}</h3>
-            <p className="font-body-md text-sm text-brand-dark-earth/70">{t('production.process.steps.s2.desc')}</p>
+            <p className="font-body-md text-base text-brand-dark-earth/70">{t('production.process.steps.s2.desc')}</p>
           </div>
 
           {/* Step 3 */}
@@ -71,7 +71,7 @@ export function Production() {
             </div>
             <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 03</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s3.title')}</h3>
-            <p className="font-body-md text-sm text-brand-dark-earth/70">{t('production.process.steps.s3.desc')}</p>
+            <p className="font-body-md text-base text-brand-dark-earth/70">{t('production.process.steps.s3.desc')}</p>
           </div>
 
           {/* Step 4 */}
@@ -81,7 +81,7 @@ export function Production() {
             </div>
             <span className="font-label-md text-label-md text-brand-cocoa-brown mb-2">STEP 04</span>
             <h3 className="font-headline-md text-[20px] text-brand-dark-earth mb-3 font-semibold">{t('production.process.steps.s4.title')}</h3>
-            <p className="font-body-md text-sm text-brand-dark-earth/70">{t('production.process.steps.s4.desc')}</p>
+            <p className="font-body-md text-base text-brand-dark-earth/70">{t('production.process.steps.s4.desc')}</p>
           </div>
         </div>
       </section>
@@ -89,34 +89,40 @@ export function Production() {
       {/* Craftsmanship Section */}
       <section className="py-section-gap-desktop bg-[#fff1e6] px-6 md:px-16 lg:px-24">
         <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24 items-center">
-          <div className="md:col-span-5 order-2 md:order-1 flex flex-col justify-center">
-            <h2 className="font-headline-lg text-[32px] md:text-headline-lg text-brand-dark-earth mb-6">{t('production.craft.title')}</h2>
-            <p className="font-body-md text-body-md text-brand-dark-earth/70 mb-8">
+          <div className="md:col-span-6 order-2 md:order-1 flex flex-col justify-center pr-0 md:pr-8 lg:pr-12">
+            <h2 className="font-headline-lg text-[40px] md:text-[48px] leading-tight text-brand-dark-earth mb-8">{t('production.craft.title')}</h2>
+            <p className="font-body-md text-xl md:text-2xl text-brand-dark-earth/80 mb-10 leading-relaxed">
               {t('production.craft.desc1')}
             </p>
-            <ul className="space-y-6">
-              <li className="flex items-start">
-                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
+            <ul className="space-y-8">
+              <li className="flex items-center bg-white/50 p-4 rounded-xl shadow-sm border border-brand-cocoa-brown/10">
+                <div className="w-12 h-12 rounded-full bg-brand-deep-olive/10 flex items-center justify-center mr-6 flex-shrink-0">
+                  <span className="material-symbols-outlined text-brand-deep-olive text-[28px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
+                </div>
                 <div>
-                  <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point1')}</h4>
+                  <h4 className="font-headline-md text-xl text-brand-dark-earth font-semibold">{t('production.craft.point1')}</h4>
                 </div>
               </li>
-              <li className="flex items-start">
-                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
+              <li className="flex items-center bg-white/50 p-4 rounded-xl shadow-sm border border-brand-cocoa-brown/10">
+                <div className="w-12 h-12 rounded-full bg-brand-deep-olive/10 flex items-center justify-center mr-6 flex-shrink-0">
+                  <span className="material-symbols-outlined text-brand-deep-olive text-[28px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
+                </div>
                 <div>
-                  <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point2')}</h4>
+                  <h4 className="font-headline-md text-xl text-brand-dark-earth font-semibold">{t('production.craft.point2')}</h4>
                 </div>
               </li>
-              <li className="flex items-start">
-                <span className="material-symbols-outlined text-brand-deep-olive mr-4 mt-1" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
+              <li className="flex items-center bg-white/50 p-4 rounded-xl shadow-sm border border-brand-cocoa-brown/10">
+                <div className="w-12 h-12 rounded-full bg-brand-deep-olive/10 flex items-center justify-center mr-6 flex-shrink-0">
+                  <span className="material-symbols-outlined text-brand-deep-olive text-[28px]" style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}>check_circle</span>
+                </div>
                 <div>
-                  <h4 className="font-label-md text-label-md text-brand-dark-earth mb-1">{t('production.craft.point3')}</h4>
+                  <h4 className="font-headline-md text-xl text-brand-dark-earth font-semibold">{t('production.craft.point3')}</h4>
                 </div>
               </li>
             </ul>
           </div>
-          <div className="md:col-span-7 order-1 md:order-2 mb-10 md:mb-0">
-            <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-[600px] rounded-xl overflow-hidden shadow-level2 group">
+          <div className="md:col-span-6 order-1 md:order-2 mb-10 md:mb-0">
+            <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-[700px] rounded-2xl overflow-hidden shadow-level2 group">
               <ImageWithFallback src={image_08deb210930238d0b61573463464031a301d6be3} alt="Artisan Craftsmanship Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
           </div>
@@ -150,7 +156,7 @@ export function Production() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-headline-lg text-[32px] md:text-headline-lg text-brand-dark-earth mb-4">{t('production.shipping.title')}</h2>
-            <p className="font-body-md text-body-md text-brand-dark-earth/70">
+            <p className="font-body-md text-lg text-brand-dark-earth/70">
               {t('production.shipping.desc')}
             </p>
           </div>

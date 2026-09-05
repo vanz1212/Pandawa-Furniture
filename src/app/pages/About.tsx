@@ -72,11 +72,9 @@ export function About() {
       <section className="bg-brand-deep-olive py-section-gap-desktop px-grid-margin mt-12">
         <div className="max-w-4xl mx-auto text-center">
           <span className="material-symbols-outlined text-4xl text-brand-cream mb-8 opacity-50 block" style={{fontVariationSettings: "'wght' 300"}}>format_quote</span>
-          <p className="font-headline-lg text-headline-lg text-brand-cream mb-8 leading-relaxed">
-            Our mission is to bridge the gap between ancient Indonesian woodworking heritage and modern, conscious living. We craft heirloom pieces not just for today, but for generations, ensuring every cut respects the earth.
+          <p className="font-headline-lg text-headline-lg font-bold text-brand-cream mb-8 leading-relaxed">
+            Our mission is to bridge the gap between ancient Indonesian woodworking <span className="font-bold text-brand-terracotta">heritage</span> and <span className="font-bold text-brand-terracotta">modern</span>, conscious living. We craft heirloom pieces not just for today, but for generations, ensuring every cut <span className="font-bold text-brand-terracotta">respects the earth</span>.
           </p>
-          <div className="w-12 h-1 bg-brand-terracotta mx-auto mb-6"></div>
-          <p className="font-label-md text-label-md text-brand-cream uppercase tracking-widest opacity-80">The Artisan Promise</p>
         </div>
       </section>
     </div>
